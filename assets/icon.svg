@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b2366"/>
+      <stop offset="1" stop-color="#1c1033"/>
+    </linearGradient>
+    <linearGradient id="hood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3d58a"/>
+      <stop offset="1" stop-color="#d9a441"/>
+    </linearGradient>
+    <clipPath id="hoodClip">
+      <path d="M32 7 C18 7 11 19 11 33 L11 57 L53 57 L53 33 C53 19 46 7 32 7 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- background tile -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+
+  <!-- hooded figure -->
+  <path d="M32 7 C18 7 11 19 11 33 L11 57 L53 57 L53 33 C53 19 46 7 32 7 Z" fill="url(#hood)"/>
+
+  <!-- woven threads across the cloak -->
+  <g clip-path="url(#hoodClip)" stroke="#b07d2a" stroke-width="1.6" fill="none" opacity="0.75">
+    <path d="M8 44 Q20 41 32 44 T56 44"/>
+    <path d="M8 50 Q20 53 32 50 T56 50"/>
+    <path d="M8 56 Q20 53 32 56 T56 56"/>
+  </g>
+
+  <!-- shadowed face opening -->
+  <path d="M32 15 C23 15 19 23 19 31 C19 38 25 42 32 42 C39 42 45 38 45 31 C45 23 41 15 32 15 Z" fill="#160b29"/>
+
+  <!-- glowing eyes -->
+  <ellipse cx="26.5" cy="30" rx="3" ry="2.4" fill="#7ef0d6"/>
+  <ellipse cx="37.5" cy="30" rx="3" ry="2.4" fill="#7ef0d6"/>
+
+  <!-- loom shuttle thread running down from the hood -->
+  <path d="M32 42 L32 57" stroke="#160b29" stroke-width="2.2"/>
+</svg>

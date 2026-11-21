@@ -1,0 +1,21 @@
+# HOST_PORT (default 8080) is the port on the Docker host; inside the container the app listens on 8080. Behind a
+# reverse proxy or a Cloudflare tunnel, point it at http://<docker-host>:<HOST_PORT>, or at http://strangerloom:8080
+# when the proxy shares a Docker network with this service.
+# FRAME_ANCESTORS lists the origins allowed to show the app in a frame, space separated, for example
+# https://tallyho.example.com. The default 'none' allows no frame.
+services:
+  web:
+    build:
+      context: .
+    image: strangerloom:latest
+    container_name: strangerloom
+    restart: unless-stopped
+    environment:
+      FRAME_ANCESTORS: "${FRAME_ANCESTORS:-'none'}"
+    ports:
+      - '${HOST_PORT:-8080}:8080'
+    healthcheck:
+      test: ['CMD', 'wget', '-qO-', 'http://127.0.0.1:8080/healthz']
+      interval: 30s
+      timeout: 3s
+      retries: 3

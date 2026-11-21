@@ -1,0 +1,307 @@
+{
+	"format": "strangerloom-presets",
+	"schemaVersion": 1,
+	"ancestries": {
+		"human": {
+			"label": "Human",
+			"ageScale": 1
+		},
+		"elf": {
+			"label": "Elf",
+			"ageScale": 6
+		},
+		"dwarf": {
+			"label": "Dwarf",
+			"ageScale": 3.5
+		},
+		"halfling": {
+			"label": "Halfling",
+			"ageScale": 1.6
+		},
+		"gnome": {
+			"label": "Gnome",
+			"ageScale": 4
+		},
+		"orc": {
+			"label": "Orc",
+			"ageScale": 0.8
+		},
+		"tiefling": {
+			"label": "Tiefling",
+			"ageScale": 1.2
+		},
+		"dragonborn": {
+			"label": "Dragonborn",
+			"ageScale": 0.9
+		}
+	},
+	"cultures": {
+		"anglo": {
+			"label": "English-speaking"
+		},
+		"hispanic": {
+			"label": "Spanish & Latin American"
+		},
+		"portuguese": {
+			"label": "Portuguese & Brazilian"
+		},
+		"french": {
+			"label": "French"
+		},
+		"italian": {
+			"label": "Italian"
+		},
+		"german": {
+			"label": "German"
+		},
+		"nordic": {
+			"label": "Nordic"
+		},
+		"polish": {
+			"label": "Polish"
+		},
+		"eastslavic": {
+			"label": "Eastern European"
+		},
+		"arabic": {
+			"label": "Arabic"
+		},
+		"southasian": {
+			"label": "South Asian"
+		},
+		"chinese": {
+			"label": "Chinese"
+		},
+		"japanese": {
+			"label": "Japanese"
+		},
+		"korean": {
+			"label": "Korean"
+		},
+		"vietnamese": {
+			"label": "Vietnamese"
+		},
+		"westafrican": {
+			"label": "West African"
+		}
+	},
+	"presets": [
+		{
+			"id": "high-fantasy",
+			"name": "High fantasy",
+			"description": "Kingdoms, guilds, temples and roads between them.",
+			"packs": ["core", "names-fantasy"],
+			"ancestries": [
+				{
+					"id": "human",
+					"w": 6
+				},
+				{
+					"id": "elf",
+					"w": 2
+				},
+				{
+					"id": "dwarf",
+					"w": 2
+				},
+				{
+					"id": "halfling",
+					"w": 2
+				},
+				{
+					"id": "gnome",
+					"w": 1
+				},
+				{
+					"id": "orc",
+					"w": 1
+				},
+				{
+					"id": "tiefling",
+					"w": 1
+				},
+				{
+					"id": "dragonborn",
+					"w": 1
+				}
+			],
+			"cultures": [],
+			"tone": ["light", "neutral"],
+			"adapter": "generic"
+		},
+		{
+			"id": "grimdark",
+			"name": "Grimdark",
+			"description": "Plague, war and bad bargains; the same ancestries, darker tables.",
+			"packs": ["core", "names-fantasy"],
+			"ancestries": [
+				{
+					"id": "human",
+					"w": 8
+				},
+				{
+					"id": "elf",
+					"w": 1
+				},
+				{
+					"id": "dwarf",
+					"w": 2
+				},
+				{
+					"id": "halfling",
+					"w": 1
+				},
+				{
+					"id": "gnome",
+					"w": 1
+				},
+				{
+					"id": "orc",
+					"w": 2
+				},
+				{
+					"id": "tiefling",
+					"w": 1
+				},
+				{
+					"id": "dragonborn",
+					"w": 1
+				}
+			],
+			"cultures": [],
+			"tone": ["neutral", "dark"],
+			"adapter": "generic"
+		},
+		{
+			"id": "modern",
+			"name": "Modern",
+			"description": "Cities of today, with or without the hidden world of urban fantasy.",
+			"packs": ["core", "names-fantasy", "names-modern"],
+			"ancestries": [
+				{
+					"id": "human",
+					"w": 12
+				},
+				{
+					"id": "elf",
+					"w": 1
+				},
+				{
+					"id": "dwarf",
+					"w": 1
+				},
+				{
+					"id": "halfling",
+					"w": 1
+				},
+				{
+					"id": "gnome",
+					"w": 1
+				},
+				{
+					"id": "orc",
+					"w": 1
+				},
+				{
+					"id": "tiefling",
+					"w": 1
+				},
+				{
+					"id": "dragonborn",
+					"w": 1
+				}
+			],
+			"cultures": [
+				"anglo",
+				"hispanic",
+				"portuguese",
+				"french",
+				"italian",
+				"german",
+				"nordic",
+				"polish",
+				"eastslavic",
+				"arabic",
+				"southasian",
+				"chinese",
+				"japanese",
+				"korean",
+				"vietnamese",
+				"westafrican"
+			],
+			"tone": ["light", "neutral"],
+			"adapter": "generic",
+			"damageAnchors": {
+				"light": "a knife",
+				"medium": "a pistol",
+				"heavy": "a shotgun"
+			}
+		},
+		{
+			"id": "sci-fi",
+			"name": "Sci-fi",
+			"description": "Stations, megacities and the people who get by in them.",
+			"packs": ["core", "names-fantasy", "names-modern", "names-cyberpunk"],
+			"ancestries": [
+				{
+					"id": "human",
+					"w": 12
+				},
+				{
+					"id": "elf",
+					"w": 1
+				},
+				{
+					"id": "dwarf",
+					"w": 1
+				},
+				{
+					"id": "halfling",
+					"w": 1
+				},
+				{
+					"id": "gnome",
+					"w": 1
+				},
+				{
+					"id": "orc",
+					"w": 1
+				},
+				{
+					"id": "tiefling",
+					"w": 1
+				},
+				{
+					"id": "dragonborn",
+					"w": 1
+				}
+			],
+			"cultures": [
+				"anglo",
+				"hispanic",
+				"portuguese",
+				"french",
+				"italian",
+				"german",
+				"nordic",
+				"polish",
+				"eastslavic",
+				"arabic",
+				"southasian",
+				"chinese",
+				"japanese",
+				"korean",
+				"vietnamese",
+				"westafrican"
+			],
+			"cultureFrame": "of {culture} heritage",
+			"tone": ["neutral", "dark"],
+			"adapter": "generic",
+			"damageAnchors": {
+				"light": "a knife",
+				"medium": "a sidearm",
+				"heavy": "a rifle"
+			}
+		}
+	]
+}

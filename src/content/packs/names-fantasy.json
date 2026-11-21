@@ -1,0 +1,2513 @@
+{
+	"format": "strangerloom-tables",
+	"schemaVersion": 1,
+	"id": "names-fantasy",
+	"name": "Fantasy names",
+	"version": 1,
+	"presets": ["high-fantasy", "grimdark"],
+	"tables": {
+		"human.list.f": {
+			"entries": [
+				"Adela",
+				"Agnes",
+				"Aldith",
+				"Alys",
+				"Amice",
+				"Aveline",
+				"Avelina",
+				"Beatrix",
+				"Brunhild",
+				"Cecily",
+				"Clarice",
+				"Constance",
+				"Edith",
+				"Elaine",
+				"Eleanor",
+				"Elinor",
+				"Emmeline",
+				"Ermengarde",
+				"Giselle",
+				"Gwendolyn",
+				"Helewise",
+				"Ida",
+				"Isabeau",
+				"Isolde",
+				"Jocelyn",
+				"Juliana",
+				"Katrine",
+				"Lettice",
+				"Linnet",
+				"Mabel",
+				"Margery",
+				"Matilda",
+				"Maude",
+				"Melisende",
+				"Millicent",
+				"Muriel",
+				"Odette",
+				"Oriel",
+				"Petronella",
+				"Rosamund",
+				"Sabine",
+				"Seraphine",
+				"Sibyl",
+				"Tamsin",
+				"Wynne",
+				"Ysolde"
+			]
+		},
+		"human.list.m": {
+			"entries": [
+				"Ademar",
+				"Alaric",
+				"Aldous",
+				"Aldric",
+				"Anselm",
+				"Baldwin",
+				"Bartholomew",
+				"Benedict",
+				"Berengar",
+				"Bertram",
+				"Cedric",
+				"Conrad",
+				"Corwin",
+				"Dorian",
+				"Edmund",
+				"Edric",
+				"Eustace",
+				"Fulk",
+				"Gareth",
+				"Garrick",
+				"Geoffrey",
+				"Gerard",
+				"Godfrey",
+				"Godric",
+				"Gregor",
+				"Hamon",
+				"Hector",
+				"Hugh",
+				"Ivo",
+				"Jasper",
+				"Leofric",
+				"Leopold",
+				"Lucan",
+				"Merrick",
+				"Osric",
+				"Oswin",
+				"Percival",
+				"Randall",
+				"Reynard",
+				"Roland",
+				"Simon",
+				"Tancred",
+				"Theobald",
+				"Tristan",
+				"Ulric",
+				"Walter",
+				"Warin",
+				"Wystan"
+			]
+		},
+		"human.list.n": {
+			"entries": [
+				"Arden",
+				"Ash",
+				"Avery",
+				"Briar",
+				"Corin",
+				"Ellis",
+				"Ember",
+				"Emery",
+				"Jory",
+				"Lark",
+				"Linden",
+				"Marlow",
+				"Morgan",
+				"Perrin",
+				"Quill",
+				"Reed",
+				"Robin",
+				"Rowan",
+				"Sage",
+				"Sorrel",
+				"Sparrow",
+				"Tarren",
+				"Vale",
+				"Wren"
+			]
+		},
+		"human.start": {
+			"entries": [
+				"Ad",
+				"Al",
+				"Ald",
+				"Bal",
+				"Ber",
+				"Bran",
+				"Cal",
+				"Cen",
+				"Cor",
+				"Dar",
+				"Dun",
+				"Ed",
+				"El",
+				"Ev",
+				"Fen",
+				"Gar",
+				"Gil",
+				"God",
+				"Hal",
+				"Hen",
+				"Ing",
+				"Is",
+				"Jor",
+				"Ker",
+				"Lan",
+				"Leo",
+				"Lor",
+				"Mar",
+				"Mer",
+				"Ned",
+				"Od",
+				"Os",
+				"Per",
+				"Ral",
+				"Ro",
+				"Rod",
+				"Ser",
+				"Tam",
+				"Tor",
+				"Wal",
+				"Wen",
+				"Wil"
+			]
+		},
+		"human.end.f": {
+			"entries": [
+				"a",
+				"anne",
+				"da",
+				"elle",
+				"ena",
+				"eth",
+				"ette",
+				"ia",
+				"ice",
+				"ilde",
+				"inda",
+				"ine",
+				"issa",
+				"isse",
+				"ith",
+				"ora",
+				"ra",
+				"wen",
+				"wyn",
+				"yn",
+				"ys"
+			]
+		},
+		"human.end.m": {
+			"entries": [
+				"ald",
+				"an",
+				"ard",
+				"bert",
+				"dan",
+				"en",
+				"er",
+				"fred",
+				"gar",
+				"ian",
+				"ias",
+				"mar",
+				"mund",
+				"old",
+				"on",
+				"ric",
+				"rick",
+				"ston",
+				"ton",
+				"wald",
+				"ward",
+				"win"
+			]
+		},
+		"human.syl.f": {
+			"phonetic": true,
+			"min": 3,
+			"max": 10,
+			"entries": ["{human.start}{human.end.f}"]
+		},
+		"human.syl.m": {
+			"phonetic": true,
+			"min": 3,
+			"max": 10,
+			"entries": ["{human.start}{human.end.m}"]
+		},
+		"human.given.f": {
+			"entries": [
+				{
+					"v": "{human.list.f}",
+					"w": 3
+				},
+				{
+					"v": "{human.syl.f}",
+					"w": 2
+				}
+			]
+		},
+		"human.given.m": {
+			"entries": [
+				{
+					"v": "{human.list.m}",
+					"w": 3
+				},
+				{
+					"v": "{human.syl.m}",
+					"w": 2
+				}
+			]
+		},
+		"human.given.n": {
+			"entries": ["{human.list.n}"]
+		},
+		"human.fam.pre": {
+			"entries": [
+				"Ash",
+				"Black",
+				"Bram",
+				"Bright",
+				"Brook",
+				"Cold",
+				"Dun",
+				"Elm",
+				"Ember",
+				"Fair",
+				"Glen",
+				"Green",
+				"Hart",
+				"Hawk",
+				"High",
+				"Hollow",
+				"Holt",
+				"Kings",
+				"Long",
+				"Mar",
+				"Marsh",
+				"North",
+				"Oak",
+				"Raven",
+				"Red",
+				"Rook",
+				"Silver",
+				"Stone",
+				"Swan",
+				"Thorn",
+				"West",
+				"White",
+				"Willow",
+				"Wind",
+				"Wolf"
+			]
+		},
+		"human.fam.suf": {
+			"entries": [
+				"brook",
+				"by",
+				"combe",
+				"cott",
+				"croft",
+				"dale",
+				"field",
+				"ford",
+				"gate",
+				"hill",
+				"holm",
+				"hurst",
+				"ley",
+				"mere",
+				"moor",
+				"more",
+				"ridge",
+				"shaw",
+				"stead",
+				"ton",
+				"well",
+				"wick",
+				"wood",
+				"worth"
+			]
+		},
+		"human.fam.trade": {
+			"entries": [
+				"Archer",
+				"Baker",
+				"Barber",
+				"Brewer",
+				"Carter",
+				"Cartwright",
+				"Chandler",
+				"Cooper",
+				"Draper",
+				"Falconer",
+				"Fletcher",
+				"Forester",
+				"Fowler",
+				"Fuller",
+				"Glover",
+				"Hayward",
+				"Hunter",
+				"Mason",
+				"Miller",
+				"Parker",
+				"Potter",
+				"Reeve",
+				"Sawyer",
+				"Shepherd",
+				"Smith",
+				"Tanner",
+				"Thatcher",
+				"Turner",
+				"Weaver",
+				"Webster",
+				"Wright"
+			]
+		},
+		"human.family": {
+			"entries": [
+				{
+					"v": "{human.fam.pre}{human.fam.suf}",
+					"w": 4
+				},
+				{
+					"v": "{human.fam.trade}",
+					"w": 2
+				}
+			]
+		},
+		"elf.start": {
+			"entries": [
+				"Ae",
+				"Ael",
+				"Aer",
+				"Al",
+				"Am",
+				"An",
+				"Ar",
+				"Ca",
+				"Cael",
+				"Cel",
+				"Ei",
+				"El",
+				"Eli",
+				"Elu",
+				"Er",
+				"Fae",
+				"Fi",
+				"Gal",
+				"Hal",
+				"Il",
+				"Ili",
+				"Ira",
+				"Is",
+				"Ith",
+				"Ky",
+				"La",
+				"Lae",
+				"Li",
+				"Lo",
+				"Lu",
+				"Ma",
+				"Mae",
+				"Mi",
+				"Mir",
+				"Na",
+				"Nae",
+				"Nai",
+				"Ny",
+				"Or",
+				"Qui",
+				"Ra",
+				"Rae",
+				"Ri",
+				"Sa",
+				"Sae",
+				"Se",
+				"Sha",
+				"Shi",
+				"Sil",
+				"Sy",
+				"Ta",
+				"Tae",
+				"Thal",
+				"Thi",
+				"Ti",
+				"Va",
+				"Vae",
+				"Ve",
+				"Vi",
+				"Ya",
+				"Yl",
+				"Za"
+			]
+		},
+		"elf.mid": {
+			"entries": [
+				"dri",
+				"la",
+				"lae",
+				"lan",
+				"li",
+				"lo",
+				"mel",
+				"na",
+				"ne",
+				"ni",
+				"nor",
+				"ra",
+				"re",
+				"ren",
+				"ri",
+				"rin",
+				"ru",
+				"sa",
+				"sar",
+				"se",
+				"si",
+				"tha",
+				"the",
+				"thi",
+				"va",
+				"ve",
+				"ya"
+			]
+		},
+		"elf.end.f": {
+			"entries": [
+				"a",
+				"ae",
+				"ala",
+				"alia",
+				"anna",
+				"ara",
+				"eth",
+				"ia",
+				"iel",
+				"ielle",
+				"ila",
+				"ira",
+				"is",
+				"isse",
+				"ith",
+				"ithe",
+				"lia",
+				"line",
+				"lyn",
+				"lys",
+				"nae",
+				"ndra",
+				"ne",
+				"nia",
+				"nya",
+				"ra",
+				"rae",
+				"riel",
+				"ril",
+				"ryn",
+				"sa",
+				"ssa",
+				"thea",
+				"thiel",
+				"wyn",
+				"ya",
+				"yra"
+			]
+		},
+		"elf.end.m": {
+			"entries": [
+				"ael",
+				"an",
+				"andor",
+				"ar",
+				"aran",
+				"as",
+				"dil",
+				"dor",
+				"dur",
+				"el",
+				"emar",
+				"en",
+				"eon",
+				"ian",
+				"ias",
+				"ion",
+				"ir",
+				"is",
+				"lar",
+				"lien",
+				"lis",
+				"mir",
+				"nar",
+				"nas",
+				"nil",
+				"nor",
+				"on",
+				"or",
+				"orin",
+				"ran",
+				"rel",
+				"rian",
+				"ril",
+				"ros",
+				"than",
+				"thas",
+				"thir",
+				"vain",
+				"vir",
+				"vyr"
+			]
+		},
+		"elf.end.n": {
+			"entries": [
+				"ael",
+				"ari",
+				"el",
+				"en",
+				"eth",
+				"il",
+				"in",
+				"is",
+				"ith",
+				"lae",
+				"ri",
+				"rin",
+				"sel",
+				"ven",
+				"wyn",
+				"yr"
+			]
+		},
+		"elf.given.f": {
+			"phonetic": true,
+			"min": 3,
+			"max": 11,
+			"entries": [
+				{
+					"v": "{elf.start}{elf.end.f}",
+					"w": 3
+				},
+				{
+					"v": "{elf.start}{elf.mid}{elf.end.f}",
+					"w": 1
+				}
+			]
+		},
+		"elf.given.m": {
+			"phonetic": true,
+			"min": 3,
+			"max": 11,
+			"entries": [
+				{
+					"v": "{elf.start}{elf.end.m}",
+					"w": 3
+				},
+				{
+					"v": "{elf.start}{elf.mid}{elf.end.m}",
+					"w": 1
+				}
+			]
+		},
+		"elf.given.n": {
+			"phonetic": true,
+			"min": 3,
+			"max": 11,
+			"entries": [
+				{
+					"v": "{elf.start}{elf.end.n}",
+					"w": 3
+				},
+				{
+					"v": "{elf.start}{elf.mid}{elf.end.n}",
+					"w": 1
+				}
+			]
+		},
+		"elf.fam.pre": {
+			"entries": [
+				"Amber",
+				"Ash",
+				"Autumn",
+				"Briar",
+				"Bright",
+				"Cloud",
+				"Dawn",
+				"Dusk",
+				"Elder",
+				"Ever",
+				"Fern",
+				"Frost",
+				"Glimmer",
+				"Gold",
+				"Leaf",
+				"Light",
+				"Mist",
+				"Moon",
+				"Night",
+				"Rain",
+				"River",
+				"Rose",
+				"Silver",
+				"Sky",
+				"Star",
+				"Storm",
+				"Sun",
+				"Swift",
+				"Thorn",
+				"Willow",
+				"Wind",
+				"Winter"
+			]
+		},
+		"elf.fam.suf": {
+			"entries": [
+				"bloom",
+				"blossom",
+				"bough",
+				"breeze",
+				"brook",
+				"dew",
+				"fall",
+				"flower",
+				"glade",
+				"gleam",
+				"glow",
+				"grove",
+				"leaf",
+				"light",
+				"petal",
+				"river",
+				"shade",
+				"shadow",
+				"singer",
+				"song",
+				"spire",
+				"star",
+				"stream",
+				"strider",
+				"sworn",
+				"weaver",
+				"whisper",
+				"wind",
+				"wing",
+				"wood"
+			]
+		},
+		"elf.fam.start": {
+			"entries": [
+				"Ael",
+				"Aes",
+				"Ama",
+				"Ara",
+				"Bel",
+				"Cai",
+				"Ela",
+				"Eras",
+				"Fae",
+				"Ila",
+				"Ith",
+				"Lia",
+				"Mela",
+				"Myr",
+				"Nae",
+				"Ory",
+				"Qua",
+				"Sel",
+				"Syl",
+				"Tha",
+				"Vae",
+				"Yae"
+			]
+		},
+		"elf.fam.end": {
+			"entries": [
+				"dorei",
+				"driel",
+				"lanthe",
+				"lian",
+				"linor",
+				"mithra",
+				"nesse",
+				"neth",
+				"ralei",
+				"ranel",
+				"rinor",
+				"sandor",
+				"tarion",
+				"thalas",
+				"thiel",
+				"vaen",
+				"vanor",
+				"wyth",
+				"ynn",
+				"zara"
+			]
+		},
+		"elf.fam.en": {
+			"entries": ["{elf.fam.pre}{elf.fam.suf}"]
+		},
+		"elf.fam.syl": {
+			"phonetic": true,
+			"min": 3,
+			"max": 13,
+			"entries": ["{elf.fam.start}{elf.fam.end}"]
+		},
+		"elf.family": {
+			"entries": [
+				{
+					"v": "{elf.fam.en}",
+					"w": 3
+				},
+				{
+					"v": "{elf.fam.syl}",
+					"w": 2
+				}
+			]
+		},
+		"dwarf.start": {
+			"entries": [
+				"Ad",
+				"Al",
+				"Bal",
+				"Bar",
+				"Bel",
+				"Bof",
+				"Bor",
+				"Bram",
+				"Brok",
+				"Bru",
+				"Dag",
+				"Dol",
+				"Dor",
+				"Dur",
+				"Dvar",
+				"Ed",
+				"Fal",
+				"Far",
+				"Flin",
+				"Gar",
+				"Gor",
+				"Gral",
+				"Grim",
+				"Gun",
+				"Hal",
+				"Har",
+				"Hel",
+				"Hjal",
+				"Hor",
+				"Kar",
+				"Kil",
+				"Mor",
+				"Nor",
+				"Od",
+				"Or",
+				"Ran",
+				"Rur",
+				"Sig",
+				"Skal",
+				"Thor",
+				"Thra",
+				"Tor",
+				"Ul",
+				"Ulf",
+				"Vond"
+			]
+		},
+		"dwarf.end.m": {
+			"entries": [
+				"ak",
+				"ar",
+				"bek",
+				"bin",
+				"bur",
+				"dar",
+				"din",
+				"dok",
+				"drak",
+				"dril",
+				"gal",
+				"gar",
+				"grim",
+				"gun",
+				"in",
+				"kin",
+				"li",
+				"mund",
+				"nar",
+				"ni",
+				"nor",
+				"oin",
+				"or",
+				"ral",
+				"rek",
+				"ric",
+				"rik",
+				"rin",
+				"ruk",
+				"tok",
+				"ulf",
+				"und",
+				"vin"
+			]
+		},
+		"dwarf.end.f": {
+			"entries": [
+				"a",
+				"bera",
+				"da",
+				"dis",
+				"dra",
+				"ga",
+				"gra",
+				"grid",
+				"hild",
+				"ia",
+				"ila",
+				"ina",
+				"is",
+				"ja",
+				"ka",
+				"lda",
+				"li",
+				"lin",
+				"mira",
+				"na",
+				"nis",
+				"ra",
+				"run",
+				"ryn",
+				"sa",
+				"tis",
+				"va",
+				"wyn",
+				"ydd"
+			]
+		},
+		"dwarf.end.n": {
+			"entries": ["di", "ek", "i", "in", "is", "li", "ri", "rin", "un", "yn"]
+		},
+		"dwarf.given.f": {
+			"phonetic": true,
+			"min": 3,
+			"max": 9,
+			"entries": ["{dwarf.start}{dwarf.end.f}"]
+		},
+		"dwarf.given.m": {
+			"phonetic": true,
+			"min": 3,
+			"max": 9,
+			"entries": ["{dwarf.start}{dwarf.end.m}"]
+		},
+		"dwarf.given.n": {
+			"phonetic": true,
+			"min": 3,
+			"max": 9,
+			"entries": ["{dwarf.start}{dwarf.end.n}"]
+		},
+		"dwarf.clan.pre": {
+			"entries": [
+				"Ale",
+				"Anvil",
+				"Barrel",
+				"Battle",
+				"Black",
+				"Boulder",
+				"Brass",
+				"Bright",
+				"Bronze",
+				"Cinder",
+				"Coal",
+				"Copper",
+				"Deep",
+				"Ember",
+				"Fell",
+				"Fire",
+				"Flint",
+				"Forge",
+				"Frost",
+				"Gem",
+				"Gold",
+				"Granite",
+				"Gravel",
+				"Grey",
+				"Grim",
+				"Hammer",
+				"Iron",
+				"Oak",
+				"Ore",
+				"Rock",
+				"Rune",
+				"Shale",
+				"Silver",
+				"Slate",
+				"Steel",
+				"Stone",
+				"Strong",
+				"Thunder",
+				"Tin"
+			]
+		},
+		"dwarf.clan.suf": {
+			"entries": [
+				"arm",
+				"axe",
+				"back",
+				"bane",
+				"beard",
+				"belly",
+				"born",
+				"bottom",
+				"braid",
+				"brand",
+				"brow",
+				"crown",
+				"delver",
+				"fist",
+				"foot",
+				"forge",
+				"guard",
+				"hammer",
+				"hand",
+				"heart",
+				"helm",
+				"hewer",
+				"jaw",
+				"mail",
+				"mantle",
+				"mug",
+				"shield",
+				"shoulder",
+				"son",
+				"tankard",
+				"vein",
+				"ward"
+			]
+		},
+		"dwarf.clan.start": {
+			"entries": [
+				"Ad",
+				"Bal",
+				"Bar",
+				"Brod",
+				"Dor",
+				"Dun",
+				"Ghel",
+				"Gor",
+				"Grun",
+				"Hol",
+				"Kaz",
+				"Kel",
+				"Kor",
+				"Mor",
+				"Rum",
+				"Thun",
+				"Ung",
+				"Zor"
+			]
+		},
+		"dwarf.clan.end": {
+			"entries": [
+				"bek",
+				"dahl",
+				"dar",
+				"gard",
+				"grim",
+				"hold",
+				"mek",
+				"nar",
+				"rak",
+				"rek",
+				"rik",
+				"ruk",
+				"rund",
+				"thul",
+				"vek",
+				"zak"
+			]
+		},
+		"dwarf.clan.en": {
+			"entries": ["{dwarf.clan.pre}{dwarf.clan.suf}"]
+		},
+		"dwarf.clan.syl": {
+			"phonetic": true,
+			"min": 3,
+			"max": 10,
+			"entries": ["{dwarf.clan.start}{dwarf.clan.end}"]
+		},
+		"dwarf.family": {
+			"entries": [
+				{
+					"v": "{dwarf.clan.en}",
+					"w": 3
+				},
+				{
+					"v": "{dwarf.clan.syl}",
+					"w": 1
+				}
+			]
+		},
+		"halfling.list.f": {
+			"entries": [
+				"Bluebell",
+				"Briony",
+				"Clover",
+				"Daisy",
+				"Elsie",
+				"Etta",
+				"Fern",
+				"Hazel",
+				"Hettie",
+				"Juniper",
+				"Lottie",
+				"Mabel",
+				"Maisie",
+				"Marigold",
+				"Millie",
+				"Myrtle",
+				"Nell",
+				"Nettie",
+				"Pansy",
+				"Peony",
+				"Pippa",
+				"Poppy",
+				"Posy",
+				"Primrose",
+				"Rosemary",
+				"Saffron",
+				"Tansy",
+				"Tilly"
+			]
+		},
+		"halfling.list.m": {
+			"entries": [
+				"Alby",
+				"Ambrose",
+				"Barney",
+				"Basil",
+				"Benno",
+				"Bram",
+				"Cob",
+				"Corby",
+				"Cuthbert",
+				"Dando",
+				"Digby",
+				"Dobbin",
+				"Fennick",
+				"Filbert",
+				"Garret",
+				"Hob",
+				"Lem",
+				"Milo",
+				"Mungo",
+				"Ned",
+				"Osbert",
+				"Percy",
+				"Rollo",
+				"Rufus",
+				"Tam",
+				"Teddy",
+				"Tobin",
+				"Wendel",
+				"Wilfred",
+				"Wim"
+			]
+		},
+		"halfling.list.n": {
+			"entries": [
+				"Ash",
+				"Bramble",
+				"Clem",
+				"Dell",
+				"Jory",
+				"Kit",
+				"Moss",
+				"Pip",
+				"Robin",
+				"Rue",
+				"Sorrel",
+				"Sunny",
+				"Teal",
+				"Wren",
+				"Yarrow"
+			]
+		},
+		"halfling.start": {
+			"entries": [
+				"Ad",
+				"Al",
+				"Ban",
+				"Bel",
+				"Ber",
+				"Bil",
+				"Bod",
+				"Bram",
+				"Cal",
+				"Cor",
+				"Dil",
+				"Dun",
+				"Fen",
+				"Gar",
+				"Hal",
+				"Jas",
+				"Lem",
+				"Lin",
+				"Mer",
+				"Mil",
+				"Mun",
+				"Nod",
+				"Os",
+				"Per",
+				"Pod",
+				"Rob",
+				"Ros",
+				"Tad",
+				"Tam",
+				"Tib",
+				"Wen",
+				"Wil"
+			]
+		},
+		"halfling.end.m": {
+			"entries": ["bert", "by", "go", "kin", "ley", "mond", "o", "ric", "ry", "ton", "wick", "win"]
+		},
+		"halfling.end.f": {
+			"entries": [
+				"a",
+				"bell",
+				"ella",
+				"ette",
+				"ie",
+				"ina",
+				"ly",
+				"na",
+				"ria",
+				"sa",
+				"sy",
+				"wyn",
+				"y"
+			]
+		},
+		"halfling.end.n": {
+			"entries": ["ber", "ey", "in", "it", "kin", "low", "ny", "sy"]
+		},
+		"halfling.syl.f": {
+			"phonetic": true,
+			"min": 3,
+			"max": 9,
+			"entries": ["{halfling.start}{halfling.end.f}"]
+		},
+		"halfling.syl.m": {
+			"phonetic": true,
+			"min": 3,
+			"max": 9,
+			"entries": ["{halfling.start}{halfling.end.m}"]
+		},
+		"halfling.syl.n": {
+			"phonetic": true,
+			"min": 3,
+			"max": 9,
+			"entries": ["{halfling.start}{halfling.end.n}"]
+		},
+		"halfling.given.f": {
+			"entries": [
+				{
+					"v": "{halfling.list.f}",
+					"w": 3
+				},
+				{
+					"v": "{halfling.syl.f}",
+					"w": 2
+				}
+			]
+		},
+		"halfling.given.m": {
+			"entries": [
+				{
+					"v": "{halfling.list.m}",
+					"w": 3
+				},
+				{
+					"v": "{halfling.syl.m}",
+					"w": 2
+				}
+			]
+		},
+		"halfling.given.n": {
+			"entries": [
+				{
+					"v": "{halfling.list.n}",
+					"w": 2
+				},
+				{
+					"v": "{halfling.syl.n}",
+					"w": 1
+				}
+			]
+		},
+		"halfling.fam.pre": {
+			"entries": [
+				"Apple",
+				"Barley",
+				"Berry",
+				"Bramble",
+				"Butter",
+				"Candle",
+				"Clover",
+				"Cobble",
+				"Copper",
+				"Elder",
+				"Fern",
+				"Fox",
+				"Good",
+				"Hay",
+				"Hazel",
+				"Heather",
+				"Hedge",
+				"Hill",
+				"Honey",
+				"Kettle",
+				"Little",
+				"Long",
+				"Meadow",
+				"Mill",
+				"Moss",
+				"Nettle",
+				"Oak",
+				"Pebble",
+				"Pepper",
+				"Plum",
+				"Puddle",
+				"Quick",
+				"Reed",
+				"Thistle",
+				"Tumble",
+				"Warm",
+				"Wheat",
+				"Willow"
+			]
+		},
+		"halfling.fam.suf": {
+			"entries": [
+				"berry",
+				"bough",
+				"brook",
+				"bucket",
+				"burrow",
+				"button",
+				"cake",
+				"cap",
+				"croft",
+				"dale",
+				"down",
+				"field",
+				"foot",
+				"gather",
+				"hearth",
+				"hill",
+				"hollow",
+				"kettle",
+				"leaf",
+				"meadow",
+				"pot",
+				"sock",
+				"stone",
+				"top",
+				"well",
+				"whistle",
+				"wick",
+				"wood"
+			]
+		},
+		"halfling.family": {
+			"entries": ["{halfling.fam.pre}{halfling.fam.suf}"]
+		},
+		"gnome.start": {
+			"entries": [
+				"Bim",
+				"Bin",
+				"Bod",
+				"Bop",
+				"Dab",
+				"Fen",
+				"Fib",
+				"Fip",
+				"Fiz",
+				"Gob",
+				"Jib",
+				"Jin",
+				"Kip",
+				"Lim",
+				"Lob",
+				"Mip",
+				"Nib",
+				"Nim",
+				"Pim",
+				"Quib",
+				"Rib",
+				"Tib",
+				"Tink",
+				"Wiz",
+				"Wob",
+				"Zan",
+				"Zib"
+			]
+		},
+		"gnome.mid": {
+			"entries": ["a", "e", "i", "o", "y"]
+		},
+		"gnome.end.m": {
+			"entries": [
+				"ber",
+				"bert",
+				"bin",
+				"bo",
+				"bus",
+				"dock",
+				"fin",
+				"kin",
+				"ley",
+				"lin",
+				"mop",
+				"nock",
+				"ock",
+				"pin",
+				"wick",
+				"wig",
+				"zo"
+			]
+		},
+		"gnome.end.f": {
+			"entries": [
+				"a",
+				"bell",
+				"bix",
+				"ella",
+				"ette",
+				"ie",
+				"ina",
+				"ix",
+				"la",
+				"mi",
+				"na",
+				"ny",
+				"pa",
+				"sy",
+				"wyn",
+				"xi"
+			]
+		},
+		"gnome.end.n": {
+			"entries": ["bin", "bit", "ix", "kin", "lo", "ly", "pip", "zy"]
+		},
+		"gnome.given.f": {
+			"phonetic": true,
+			"min": 3,
+			"max": 12,
+			"entries": [
+				{
+					"v": "{gnome.start}{gnome.end.f}",
+					"w": 3
+				},
+				{
+					"v": "{gnome.start}{gnome.mid}{gnome.end.f}",
+					"w": 2
+				}
+			]
+		},
+		"gnome.given.m": {
+			"phonetic": true,
+			"min": 3,
+			"max": 12,
+			"entries": [
+				{
+					"v": "{gnome.start}{gnome.end.m}",
+					"w": 3
+				},
+				{
+					"v": "{gnome.start}{gnome.mid}{gnome.end.m}",
+					"w": 2
+				}
+			]
+		},
+		"gnome.given.n": {
+			"phonetic": true,
+			"min": 3,
+			"max": 12,
+			"entries": [
+				{
+					"v": "{gnome.start}{gnome.end.n}",
+					"w": 3
+				},
+				{
+					"v": "{gnome.start}{gnome.mid}{gnome.end.n}",
+					"w": 2
+				}
+			]
+		},
+		"gnome.fam.pre": {
+			"entries": [
+				"Bellows",
+				"Brass",
+				"Bright",
+				"Button",
+				"Clock",
+				"Copper",
+				"Dapple",
+				"Fiddle",
+				"Fizz",
+				"Gadget",
+				"Gear",
+				"Gem",
+				"Glitter",
+				"Knob",
+				"Nimble",
+				"Pebble",
+				"Puzzle",
+				"Quick",
+				"Spark",
+				"Spring",
+				"Sprocket",
+				"Thimble",
+				"Tinker",
+				"Twist",
+				"Whistle",
+				"Wiggle"
+			]
+		},
+		"gnome.fam.suf": {
+			"entries": [
+				"bang",
+				"bell",
+				"bottom",
+				"button",
+				"fizz",
+				"gear",
+				"gleam",
+				"hammer",
+				"nose",
+				"pocket",
+				"spark",
+				"spindle",
+				"sprocket",
+				"top",
+				"twist",
+				"whistle",
+				"widget",
+				"wobble",
+				"wrench"
+			]
+		},
+		"gnome.fam.start": {
+			"entries": [
+				"Bram",
+				"Dib",
+				"Fen",
+				"Hobb",
+				"Kett",
+				"Mott",
+				"Nib",
+				"Pell",
+				"Quill",
+				"Rimm",
+				"Tamm",
+				"Wogg"
+			]
+		},
+		"gnome.fam.end": {
+			"entries": ["aby", "ersby", "ington", "lewick", "ock", "ottle", "ump", "wick", "wort"]
+		},
+		"gnome.fam.en": {
+			"entries": ["{gnome.fam.pre}{gnome.fam.suf}"]
+		},
+		"gnome.fam.syl": {
+			"phonetic": true,
+			"min": 3,
+			"max": 12,
+			"entries": ["{gnome.fam.start}{gnome.fam.end}"]
+		},
+		"gnome.family": {
+			"entries": [
+				{
+					"v": "{gnome.fam.en}",
+					"w": 3
+				},
+				{
+					"v": "{gnome.fam.syl}",
+					"w": 1
+				}
+			]
+		},
+		"orc.start": {
+			"entries": [
+				"Az",
+				"Bag",
+				"Bol",
+				"Bor",
+				"Brak",
+				"Bur",
+				"Drog",
+				"Dur",
+				"Dush",
+				"Gar",
+				"Gash",
+				"Ghor",
+				"Gor",
+				"Gra",
+				"Grak",
+				"Grom",
+				"Gru",
+				"Gul",
+				"Hag",
+				"Hruk",
+				"Kar",
+				"Krag",
+				"Kro",
+				"Kru",
+				"Lug",
+				"Mau",
+				"Mog",
+				"Mor",
+				"Muz",
+				"Nar",
+				"Og",
+				"Rag",
+				"Rok",
+				"Ruk",
+				"Shag",
+				"Shar",
+				"Skar",
+				"Snag",
+				"Thak",
+				"Throk",
+				"Ug",
+				"Ur",
+				"Uz",
+				"Vrak",
+				"Yag",
+				"Zog",
+				"Zug"
+			]
+		},
+		"orc.end.m": {
+			"entries": [
+				"ak",
+				"akk",
+				"ash",
+				"bag",
+				"dak",
+				"dur",
+				"dush",
+				"gak",
+				"gash",
+				"gol",
+				"gor",
+				"grim",
+				"gron",
+				"gul",
+				"mak",
+				"mog",
+				"nak",
+				"nar",
+				"nash",
+				"okk",
+				"oth",
+				"rak",
+				"rash",
+				"ruk",
+				"thak",
+				"tok",
+				"uk",
+				"ukk",
+				"ul",
+				"ush",
+				"zag",
+				"zug"
+			]
+		},
+		"orc.end.f": {
+			"entries": [
+				"a",
+				"ag",
+				"ash",
+				"bura",
+				"dra",
+				"eth",
+				"ga",
+				"gha",
+				"ira",
+				"ka",
+				"kha",
+				"la",
+				"ma",
+				"mi",
+				"na",
+				"ni",
+				"ra",
+				"ri",
+				"sha",
+				"tha",
+				"ula",
+				"usha",
+				"va",
+				"yka",
+				"za",
+				"zha"
+			]
+		},
+		"orc.end.n": {
+			"entries": ["ag", "ak", "ash", "ek", "ga", "ka", "ok", "ra", "ug", "ur", "uz"]
+		},
+		"orc.given.f": {
+			"phonetic": true,
+			"min": 3,
+			"max": 9,
+			"entries": ["{orc.start}{orc.end.f}"]
+		},
+		"orc.given.m": {
+			"phonetic": true,
+			"min": 3,
+			"max": 9,
+			"entries": ["{orc.start}{orc.end.m}"]
+		},
+		"orc.given.n": {
+			"phonetic": true,
+			"min": 3,
+			"max": 9,
+			"entries": ["{orc.start}{orc.end.n}"]
+		},
+		"orc.ep.pre": {
+			"entries": [
+				"Ash",
+				"Bear",
+				"Black",
+				"Blood",
+				"Bone",
+				"Broken",
+				"Crag",
+				"Doom",
+				"Dread",
+				"Fang",
+				"Flesh",
+				"Gore",
+				"Grim",
+				"Gut",
+				"Head",
+				"Iron",
+				"Mud",
+				"Night",
+				"Rage",
+				"Red",
+				"Rock",
+				"Rot",
+				"Ruin",
+				"Skull",
+				"Spine",
+				"Storm",
+				"Throat",
+				"Tusk",
+				"War",
+				"Wolf"
+			]
+		},
+		"orc.ep.suf": {
+			"entries": [
+				"biter",
+				"breaker",
+				"burner",
+				"chewer",
+				"cleaver",
+				"crusher",
+				"cutter",
+				"eater",
+				"fang",
+				"fist",
+				"gnasher",
+				"gouger",
+				"hide",
+				"hunter",
+				"jaw",
+				"maw",
+				"mauler",
+				"render",
+				"ripper",
+				"scar",
+				"slayer",
+				"smasher",
+				"splitter",
+				"stomper",
+				"taker",
+				"tooth",
+				"tusk"
+			]
+		},
+		"orc.tribe.adj": {
+			"entries": [
+				"Black",
+				"Bleeding",
+				"Bloody",
+				"Broken",
+				"Burning",
+				"Crimson",
+				"Gnashing",
+				"Grinning",
+				"Hollow",
+				"Howling",
+				"Iron",
+				"Red",
+				"Rotting",
+				"Rusted",
+				"Scarred",
+				"Screaming",
+				"Severed",
+				"Shattered",
+				"Wailing",
+				"White"
+			]
+		},
+		"orc.tribe.noun": {
+			"entries": [
+				"Axe",
+				"Banner",
+				"Blade",
+				"Boar",
+				"Claw",
+				"Crow",
+				"Eye",
+				"Fang",
+				"Fist",
+				"Hammer",
+				"Hand",
+				"Jaw",
+				"Maw",
+				"Moon",
+				"Scar",
+				"Skull",
+				"Spear",
+				"Sun",
+				"Tooth",
+				"Totem",
+				"Tusk",
+				"Wolf"
+			]
+		},
+		"orc.epithet": {
+			"entries": ["{orc.ep.pre}{orc.ep.suf}"]
+		},
+		"orc.family": {
+			"entries": [
+				{
+					"v": "{orc.epithet}",
+					"w": 3
+				},
+				{
+					"v": "of the {orc.tribe.adj} {orc.tribe.noun}",
+					"w": 1
+				}
+			]
+		},
+		"orc.nickname": {
+			"entries": [
+				"Bones",
+				"Boulder",
+				"Brick",
+				"Bruiser",
+				"Bulldog",
+				"Chops",
+				"Crusher",
+				"Diesel",
+				"Gravel",
+				"Grinner",
+				"Hammer",
+				"Ironjaw",
+				"Knuckles",
+				"Lugnut",
+				"Moose",
+				"Rocky",
+				"Sarge",
+				"Smash",
+				"Tank",
+				"Tusk",
+				"Wrench"
+			]
+		},
+		"tiefling.start": {
+			"entries": [
+				"Ak",
+				"Am",
+				"Ash",
+				"Az",
+				"Bal",
+				"Bar",
+				"Bel",
+				"Cyr",
+				"Dra",
+				"Ek",
+				"Ir",
+				"Kai",
+				"Kar",
+				"Lev",
+				"Mal",
+				"Mel",
+				"Mor",
+				"Neph",
+				"Or",
+				"Ori",
+				"Pel",
+				"Rath",
+				"Sar",
+				"Sek",
+				"Ska",
+				"Tha",
+				"Val",
+				"Vel",
+				"Xa",
+				"Zar",
+				"Zeph"
+			]
+		},
+		"tiefling.mid": {
+			"entries": ["a", "e", "i", "o", "ra", "ri", "the", "ze"]
+		},
+		"tiefling.end.m": {
+			"entries": [
+				"ach",
+				"ael",
+				"akos",
+				"amon",
+				"as",
+				"ek",
+				"eus",
+				"iax",
+				"ion",
+				"is",
+				"mon",
+				"nos",
+				"on",
+				"os",
+				"oth",
+				"ros",
+				"thar",
+				"us"
+			]
+		},
+		"tiefling.end.f": {
+			"entries": [
+				"a",
+				"axa",
+				"ena",
+				"essa",
+				"ia",
+				"ira",
+				"is",
+				"issa",
+				"ith",
+				"ka",
+				"ophe",
+				"ria",
+				"yne",
+				"ys"
+			]
+		},
+		"tiefling.end.n": {
+			"entries": ["ai", "ek", "el", "en", "ex", "is", "yr", "yx"]
+		},
+		"tiefling.syl.f": {
+			"phonetic": true,
+			"min": 3,
+			"max": 10,
+			"entries": [
+				{
+					"v": "{tiefling.start}{tiefling.end.f}",
+					"w": 3
+				},
+				{
+					"v": "{tiefling.start}{tiefling.mid}{tiefling.end.f}",
+					"w": 1
+				}
+			]
+		},
+		"tiefling.syl.m": {
+			"phonetic": true,
+			"min": 3,
+			"max": 10,
+			"entries": [
+				{
+					"v": "{tiefling.start}{tiefling.end.m}",
+					"w": 3
+				},
+				{
+					"v": "{tiefling.start}{tiefling.mid}{tiefling.end.m}",
+					"w": 1
+				}
+			]
+		},
+		"tiefling.syl.n": {
+			"phonetic": true,
+			"min": 3,
+			"max": 10,
+			"entries": [
+				{
+					"v": "{tiefling.start}{tiefling.end.n}",
+					"w": 3
+				},
+				{
+					"v": "{tiefling.start}{tiefling.mid}{tiefling.end.n}",
+					"w": 1
+				}
+			]
+		},
+		"tiefling.virtue": {
+			"entries": [
+				"Absolution",
+				"Ambition",
+				"Anthem",
+				"Ardor",
+				"Aria",
+				"Ballad",
+				"Bliss",
+				"Cinder",
+				"Clarity",
+				"Covenant",
+				"Dirge",
+				"Dusk",
+				"Echo",
+				"Elegy",
+				"Envy",
+				"Fervor",
+				"Gloam",
+				"Grace",
+				"Grief",
+				"Harmony",
+				"Hunger",
+				"Hymn",
+				"Justice",
+				"Lament",
+				"Legacy",
+				"Malice",
+				"Mercy",
+				"Midnight",
+				"Mischief",
+				"Oath",
+				"Omen",
+				"Pity",
+				"Promise",
+				"Psalm",
+				"Rapture",
+				"Reckoning",
+				"Requiem",
+				"Riddle",
+				"Rue",
+				"Solace",
+				"Spite",
+				"Valor",
+				"Verity",
+				"Vesper",
+				"Vigil",
+				"Whisper",
+				"Wrath",
+				"Zeal"
+			]
+		},
+		"tiefling.given.f": {
+			"entries": [
+				{
+					"v": "{tiefling.syl.f}",
+					"w": 4
+				},
+				{
+					"v": "{tiefling.virtue}",
+					"w": 1
+				}
+			]
+		},
+		"tiefling.given.m": {
+			"entries": [
+				{
+					"v": "{tiefling.syl.m}",
+					"w": 4
+				},
+				{
+					"v": "{tiefling.virtue}",
+					"w": 1
+				}
+			]
+		},
+		"tiefling.given.n": {
+			"entries": [
+				{
+					"v": "{tiefling.virtue}",
+					"w": 3
+				},
+				{
+					"v": "{tiefling.syl.n}",
+					"w": 1
+				}
+			]
+		},
+		"tiefling.fam.pre": {
+			"entries": [
+				"Ash",
+				"Black",
+				"Brimstone",
+				"Cinder",
+				"Crimson",
+				"Dusk",
+				"Ember",
+				"Gloom",
+				"Hell",
+				"Night",
+				"Sable",
+				"Shadow",
+				"Smoke",
+				"Thorn",
+				"Umber",
+				"Vesper"
+			]
+		},
+		"tiefling.fam.suf": {
+			"entries": [
+				"born",
+				"brand",
+				"burn",
+				"fall",
+				"horn",
+				"mark",
+				"scar",
+				"sworn",
+				"tail",
+				"thorn",
+				"vow",
+				"ward",
+				"wing"
+			]
+		},
+		"tiefling.fam.start": {
+			"entries": ["Dre", "Kael", "Mal", "Mor", "Sar", "Thal", "Vask", "Ves", "Xan", "Zeph"]
+		},
+		"tiefling.fam.end": {
+			"entries": ["ane", "aris", "ellan", "ennis", "ira", "ith", "orin", "oth", "ovar"]
+		},
+		"tiefling.fam.en": {
+			"entries": ["{tiefling.fam.pre}{tiefling.fam.suf}"]
+		},
+		"tiefling.fam.syl": {
+			"phonetic": true,
+			"min": 3,
+			"max": 11,
+			"entries": ["{tiefling.fam.start}{tiefling.fam.end}"]
+		},
+		"tiefling.family": {
+			"entries": [
+				{
+					"v": "{tiefling.fam.en}",
+					"w": 2
+				},
+				{
+					"v": "{tiefling.fam.syl}",
+					"w": 2
+				},
+				{
+					"v": "{human.family}",
+					"w": 1
+				}
+			]
+		},
+		"dragonborn.start": {
+			"entries": [
+				"Ak",
+				"Ar",
+				"Bal",
+				"Bel",
+				"Bha",
+				"Dra",
+				"Dur",
+				"Ghe",
+				"Gra",
+				"Har",
+				"Hes",
+				"Ish",
+				"Iza",
+				"Jhe",
+				"Kav",
+				"Kel",
+				"Kha",
+				"Kor",
+				"Kri",
+				"Med",
+				"Mis",
+				"Na",
+				"Nyr",
+				"Oth",
+				"Pan",
+				"Pra",
+				"Qar",
+				"Ras",
+				"Rho",
+				"Rhy",
+				"Sev",
+				"Sha",
+				"Sor",
+				"Sur",
+				"Tal",
+				"Tar",
+				"Thar",
+				"Tor",
+				"Ux",
+				"Vor",
+				"Vre",
+				"Vy",
+				"Xar",
+				"Yar",
+				"Zar",
+				"Ze",
+				"Zor"
+			]
+		},
+		"dragonborn.end.m": {
+			"entries": [
+				"ash",
+				"ax",
+				"dar",
+				"dorn",
+				"dros",
+				"gar",
+				"ghor",
+				"goth",
+				"han",
+				"jhan",
+				"jun",
+				"kar",
+				"kas",
+				"khan",
+				"mash",
+				"mir",
+				"nax",
+				"ndar",
+				"nesh",
+				"rash",
+				"rax",
+				"rek",
+				"rinn",
+				"ros",
+				"sar",
+				"shan",
+				"thax",
+				"thrax",
+				"thul",
+				"vash",
+				"vor",
+				"xan",
+				"zar",
+				"zun"
+			]
+		},
+		"dragonborn.end.f": {
+			"entries": [
+				"a",
+				"ali",
+				"dra",
+				"esh",
+				"ira",
+				"is",
+				"isha",
+				"ith",
+				"lis",
+				"lyx",
+				"nara",
+				"nys",
+				"ra",
+				"rith",
+				"sari",
+				"sha",
+				"shi",
+				"tha",
+				"thra",
+				"va",
+				"vys",
+				"yra",
+				"ys",
+				"zara"
+			]
+		},
+		"dragonborn.end.n": {
+			"entries": ["ar", "ek", "esh", "in", "ix", "ra", "ris", "ur", "ys", "yth"]
+		},
+		"dragonborn.given.f": {
+			"phonetic": true,
+			"min": 3,
+			"max": 9,
+			"entries": ["{dragonborn.start}{dragonborn.end.f}"]
+		},
+		"dragonborn.given.m": {
+			"phonetic": true,
+			"min": 3,
+			"max": 9,
+			"entries": ["{dragonborn.start}{dragonborn.end.m}"]
+		},
+		"dragonborn.given.n": {
+			"phonetic": true,
+			"min": 3,
+			"max": 9,
+			"entries": ["{dragonborn.start}{dragonborn.end.n}"]
+		},
+		"dragonborn.clan.a": {
+			"entries": [
+				"Ak",
+				"Bar",
+				"Del",
+				"Drak",
+				"Ghar",
+				"Hyr",
+				"Ish",
+				"Kal",
+				"Kor",
+				"Mor",
+				"Mys",
+				"Prax",
+				"Ryx",
+				"Saur",
+				"Shen",
+				"Tal",
+				"Thur",
+				"Vel",
+				"Vor",
+				"Xor",
+				"Zen",
+				"Zhur"
+			]
+		},
+		"dragonborn.clan.mid": {
+			"entries": ["an", "ath", "ax", "ek", "esh", "il", "im", "ir", "on", "or", "ur", "ys"]
+		},
+		"dragonborn.clan.b": {
+			"entries": [
+				"darr",
+				"dax",
+				"garr",
+				"ith",
+				"kesh",
+				"lon",
+				"mir",
+				"nar",
+				"rath",
+				"rinth",
+				"rion",
+				"thar",
+				"thos",
+				"thys",
+				"vax",
+				"vorn",
+				"xian",
+				"zar"
+			]
+		},
+		"dragonborn.clan.pre": {
+			"entries": [
+				"Ash",
+				"Blaze",
+				"Brass",
+				"Bronze",
+				"Cinder",
+				"Copper",
+				"Ember",
+				"Flame",
+				"Frost",
+				"Gold",
+				"Iron",
+				"Jade",
+				"Obsidian",
+				"Onyx",
+				"Ruby",
+				"Scorch",
+				"Silver",
+				"Sky",
+				"Smoke",
+				"Storm",
+				"Sun",
+				"Thunder",
+				"Venom"
+			]
+		},
+		"dragonborn.clan.suf": {
+			"entries": [
+				"blood",
+				"born",
+				"breath",
+				"claw",
+				"crest",
+				"fang",
+				"heart",
+				"hide",
+				"horn",
+				"maw",
+				"roar",
+				"scale",
+				"spine",
+				"tail",
+				"talon",
+				"ward",
+				"wing"
+			]
+		},
+		"dragonborn.clan.syl": {
+			"phonetic": true,
+			"min": 3,
+			"max": 13,
+			"entries": [
+				{
+					"v": "{dragonborn.clan.a}{dragonborn.clan.b}",
+					"w": 3
+				},
+				{
+					"v": "{dragonborn.clan.a}{dragonborn.clan.mid}{dragonborn.clan.b}",
+					"w": 2
+				}
+			]
+		},
+		"dragonborn.clan.en": {
+			"entries": ["{dragonborn.clan.pre}{dragonborn.clan.suf}"]
+		},
+		"dragonborn.family": {
+			"entries": [
+				{
+					"v": "{dragonborn.clan.syl}",
+					"w": 3
+				},
+				{
+					"v": "{dragonborn.clan.en}",
+					"w": 1
+				}
+			]
+		},
+		"name.given": {
+			"entries": [
+				{
+					"v": "{human.given.$g}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["human"]
+					}
+				},
+				{
+					"v": "{elf.given.$g}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["elf"]
+					}
+				},
+				{
+					"v": "{dwarf.given.$g}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["dwarf"]
+					}
+				},
+				{
+					"v": "{orc.given.$g}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["orc"]
+					}
+				},
+				{
+					"v": "{dragonborn.given.$g}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["dragonborn"]
+					}
+				},
+				{
+					"v": "{halfling.given.$g}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["halfling"]
+					}
+				},
+				{
+					"v": "{gnome.given.$g}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["gnome"]
+					}
+				},
+				{
+					"v": "{tiefling.given.$g}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["tiefling"]
+					}
+				}
+			]
+		},
+		"name.family": {
+			"entries": [
+				{
+					"v": "{human.family}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["human"]
+					}
+				},
+				{
+					"v": "{elf.family}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["elf"]
+					}
+				},
+				{
+					"v": "{dwarf.family}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["dwarf"]
+					}
+				},
+				{
+					"v": "{orc.family}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["orc"]
+					}
+				},
+				{
+					"v": "{dragonborn.family}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["dragonborn"]
+					}
+				},
+				{
+					"v": "{halfling.family}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["halfling"]
+					}
+				},
+				{
+					"v": "{gnome.family}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["gnome"]
+					}
+				},
+				{
+					"v": "{tiefling.family}",
+					"when": {
+						"preset": ["high-fantasy", "grimdark"],
+						"ancestry": ["tiefling"]
+					}
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,234 @@
+{
+	"format": "strangerloom-adapter",
+	"schemaVersion": 1,
+	"id": "osr",
+	"name": "Old-school",
+	"version": 1,
+	"labels": {
+		"defence": "Defence",
+		"offence": "Attacks",
+		"hd": "Hit dice",
+		"hp": "Hit points",
+		"ac": "Armour class",
+		"thac0": "THAC0",
+		"morale": "Morale",
+		"saves": "Saves as",
+		"move": "Movement",
+		"xp": "XP",
+		"attacksPerRound": "Attacks per round",
+		"spells": "Spells"
+	},
+	"lookups": {
+		"hd": {
+			"by": ["threat", "power"],
+			"rows": {
+				"minion": [0, 0, 0, 1, 1, 1, 2, 2, 3, 3],
+				"standard": [1, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+				"elite": [2, 3, 4, 5, 6, 7, 9, 10, 11, 12],
+				"boss": [4, 5, 6, 8, 9, 10, 12, 13, 15, 16]
+			}
+		},
+		"hdText": {
+			"by": ["threat", "power"],
+			"rows": {
+				"minion": ["½", "½", "½", "1", "1", "1", "2", "2", "3", "3"],
+				"standard": ["1", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+				"elite": ["2", "3", "4", "5", "6", "7", "9", "10", "11", "12"],
+				"boss": ["4", "5", "6", "8", "9", "10", "12", "13", "15", "16"]
+			}
+		},
+		"hp": {
+			"by": ["threat", "power"],
+			"rows": {
+				"minion": [2, 2, 2, 4, 4, 4, 9, 9, 13, 13],
+				"standard": [4, 4, 9, 13, 18, 22, 27, 31, 36, 40],
+				"elite": [9, 13, 18, 22, 27, 31, 40, 45, 49, 54],
+				"boss": [18, 22, 27, 36, 40, 45, 54, 58, 67, 72]
+			}
+		},
+		"hpRoll": {
+			"by": ["threat", "power"],
+			"rows": {
+				"minion": ["1d4", "1d4", "1d4", "1d8", "1d8", "1d8", "2d8", "2d8", "3d8", "3d8"],
+				"standard": ["1d8", "1d8", "2d8", "3d8", "4d8", "5d8", "6d8", "7d8", "8d8", "9d8"],
+				"elite": ["2d8", "3d8", "4d8", "5d8", "6d8", "7d8", "9d8", "10d8", "11d8", "12d8"],
+				"boss": ["4d8", "5d8", "6d8", "8d8", "9d8", "10d8", "12d8", "13d8", "15d8", "16d8"]
+			}
+		},
+		"xp": {
+			"by": ["hd"],
+			"base": 0,
+			"rows": [
+				5, 10, 20, 35, 75, 175, 275, 650, 900, 1100, 1350, 1700, 2000, 2300, 2600, 2900, 3100
+			]
+		},
+		"damage": {
+			"by": ["damageClass", "power"],
+			"rows": {
+				"light": ["1d4", "1d4", "1d4", "1d4", "1d4+1", "1d4+1", "1d6+1", "1d6+1", "1d6+2", "1d6+2"],
+				"medium": [
+					"1d6",
+					"1d6",
+					"1d6",
+					"1d6+1",
+					"1d8",
+					"1d8",
+					"1d8+1",
+					"1d8+2",
+					"1d10+2",
+					"1d10+2"
+				],
+				"heavy": ["1d8", "1d8", "1d10", "1d10", "1d10+1", "2d6", "2d6+1", "2d6+2", "2d8+2", "2d8+3"]
+			}
+		},
+		"area": {
+			"by": ["damageClass", "power"],
+			"rows": {
+				"light": ["1d6", "1d6", "2d6", "2d6", "3d6", "3d6", "4d6", "4d6", "5d6", "5d6"],
+				"medium": ["2d6", "2d6", "3d6", "4d6", "5d6", "5d6", "6d6", "7d6", "8d6", "8d6"],
+				"heavy": ["3d6", "3d6", "4d6", "5d6", "6d6", "7d6", "8d6", "9d6", "10d6", "11d6"]
+			}
+		},
+		"morale": {
+			"by": ["threat"],
+			"rows": {
+				"minion": 6,
+				"standard": 8,
+				"elite": 9,
+				"boss": 10
+			}
+		},
+		"attacks": {
+			"by": ["threat"],
+			"rows": {
+				"minion": 1,
+				"standard": 1,
+				"elite": 2,
+				"boss": 2
+			}
+		},
+		"saveClass": {
+			"by": ["role"],
+			"rows": {
+				"brute": "Fighter",
+				"skirmisher": "Thief",
+				"controller": "Magic-user",
+				"support": "Cleric",
+				"sniper": "Thief",
+				"leader": "Fighter"
+			}
+		},
+		"rider": {
+			"by": ["rider"],
+			"rows": {
+				"": "",
+				"knock-down": "Save vs paralysis or fall prone.",
+				"push": "Save vs paralysis or be shoved 10 feet.",
+				"grab": "Held; a round and a strength check to break free.",
+				"slow": "Save vs spells or move at half speed for 1d6 rounds.",
+				"blind": "Save vs spells or be blinded for 1d4 rounds.",
+				"frighten": "Save vs spells or flee for 1d4 rounds.",
+				"daze": "Save vs paralysis or lose the next action.",
+				"bleed": "Loses 1 hp a round until bound.",
+				"ignite": "Burns for 1d4 a round until put out.",
+				"weaken": "Save vs poison or -2 to hit for 1d6 rounds.",
+				"expose": "The next attack against the target gets +2 to hit.",
+				"silence": "Save vs spells or be silenced for 1d4 rounds.",
+				"sleep": "Save vs spells or sleep until struck or shaken."
+			}
+		},
+		"chance": {
+			"by": ["rating"],
+			"base": 0,
+			"rows": [1, 2, 3, 4, 5, 6]
+		}
+	},
+	"fields": [
+		{
+			"id": "hd",
+			"formula": "lookup('hd', threat, power)",
+			"format": "{lookup('hdText', threat, power)}",
+			"note": "{lookup('xp', hd)} XP"
+		},
+		{
+			"id": "acBonus",
+			"formula": "floor(power / 3) + (defence == 'hard-to-hit' ? 1 : 0) + (defence == 'evasive' ? 1 : 0) + (has('armoured') ? 3 : 0)",
+			"hidden": true
+		},
+		{
+			"id": "thac0",
+			"formula": "max(10, 19 - max(1, hd))",
+			"note": "attack bonus {signed(max(1, hd))}"
+		},
+		{
+			"id": "attacksPerRound",
+			"formula": "lookup('attacks', threat)"
+		},
+		{
+			"id": "morale",
+			"formula": "min(12, lookup('morale', threat) + (has('fanatic') ? 2 : 0) + (has('commander') ? 1 : 0))"
+		},
+		{
+			"id": "saves",
+			"formula": "lookup('saveClass', role) + ' ' + max(1, hd)"
+		},
+		{
+			"id": "move",
+			"formula": "has('armoured') ? \"90' (30')\" : has('mobile') ? \"150' (50')\" : \"120' (40')\""
+		},
+		{
+			"id": "spells",
+			"formula": "'Casts as a level ' + max(1, hd) + ' ' + (has('holy') ? 'cleric' : 'magic-user')",
+			"when": "has('spellcaster') or has('holy')"
+		},
+		{
+			"id": "hp",
+			"section": "defence",
+			"formula": "lookup('hp', threat, power)",
+			"roll": "lookup('hpRoll', threat, power)"
+		},
+		{
+			"id": "ac",
+			"section": "defence",
+			"formula": "9 - acBonus",
+			"format": "{value} [{19 - value}]",
+			"note": "descending [ascending]"
+		}
+	],
+	"attack": {
+		"toHit": "{kind == 'area' ? '' : signed(max(1, hd))}",
+		"damage": "{kind == 'area' ? lookup('area', damageClass, power) : lookup('damage', damageClass, power)}",
+		"note": "{kind == 'area' ? 'Everyone in the area, save vs breath for half. ' : ''}{lookup('rider', rider)}{trigger == '' ? '' : ' ' + cap(trigger) + '.'}"
+	},
+	"competencies": {
+		"label": "Skills (X-in-6)",
+		"format": "{lookup('chance', rating)}-in-6",
+		"skills": {
+			"combat": ["Feats of strength"],
+			"magic": ["Lore of magic"],
+			"stealth": ["Move silently", "Hide in shadows"],
+			"social": ["Parley", "Lie"],
+			"knowledge": ["Lore", "Languages"],
+			"survival": ["Track", "Forage", "Listen"]
+		}
+	},
+	"sections": ["header", "defence", "offence", "competencies", "abilities", "gear", "tactics"],
+	"subtitle": "{archetypeLabel} | HD {lookup('hdText', threat, power)} | {cap(threat)}",
+	"tracker": {
+		"hp": "hp",
+		"hpRoll": "hp",
+		"initiative": "'1d6'",
+		"conditions": [
+			"bloodied",
+			"prone",
+			"held",
+			"blinded",
+			"fleeing",
+			"asleep",
+			"poisoned",
+			"silenced",
+			"burning",
+			"bleeding"
+		]
+	}
+}

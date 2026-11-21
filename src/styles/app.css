@@ -1,0 +1,462 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+/* Heading fonts of the Candlelight, Horror and Terminal themes: Latin and Latin Extended (Orbitron has Latin
+   only), in the weights the headings use. The browser loads a file only when a heading needs it. */
+@import '@fontsource/cinzel/400.css';
+@import '@fontsource/cinzel/700.css';
+@import '@fontsource/special-elite/400.css';
+@import '@fontsource/orbitron/500.css';
+@import '@fontsource/orbitron/700.css';
+
+@theme {
+	--font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* `inline` makes the colour utilities read the variables where they are used, so an element that carries its own
+   data-theme (the theme previews in Settings) is painted with that theme, not the page's. */
+@theme inline {
+	--color-surface: var(--surface);
+	--color-surface-2: var(--surface-2);
+	--color-surface-3: var(--surface-3);
+	--color-border: var(--border);
+	--color-border-strong: var(--border-strong);
+	--color-ink: var(--ink);
+	--color-ink-muted: var(--ink-muted);
+	--color-accent: var(--accent);
+	--color-accent-fill: var(--accent-fill);
+	--color-accent-ink: var(--accent-ink);
+	--color-danger: var(--danger);
+}
+
+/* `dark:` follows the theme in use: the system's dark mode while no theme is chosen, and the dark themes
+   (Dark, Graphite, Midnight, Candlelight, Horror, Cyberpunk, Terminal) when one is. */
+@custom-variant dark {
+	@media (prefers-color-scheme: dark) {
+		&:where(:root:not([data-theme]), :root:not([data-theme]) *) {
+			@slot;
+		}
+	}
+	&:where(
+		:is(
+			[data-theme='dark'],
+			[data-theme='graphite'],
+			[data-theme='midnight'],
+			[data-theme='candlelight'],
+			[data-theme='horror'],
+			[data-theme='cyberpunk'],
+			[data-theme='terminal']
+		),
+		:is(
+				[data-theme='dark'],
+				[data-theme='graphite'],
+				[data-theme='midnight'],
+				[data-theme='candlelight'],
+				[data-theme='horror'],
+				[data-theme='cyberpunk'],
+				[data-theme='terminal']
+			)
+			*
+	) {
+		@slot;
+	}
+}
+
+/* Themes. Tokens: three surfaces (page, panels and sidebar, hover and selected), a hairline border, a stronger
+   border for form fields (3:1 against the surfaces), text and muted text, the accent (text, borders, focus rings
+   and tints), the accent fill of solid buttons and selected pills with the colour of text on it, and the colour
+   of errors and delete actions. Every pair is checked in `engine/themes.test.ts`. No data-theme attribute means
+   "match the system": Light, or Dark when the system is dark.
+   Extras: `--font-display` for headings and titles, `--glow` around solid accent buttons and `--page-image` on
+   the page background. Every theme starts without them, so a preview inside another theme does not inherit
+   that theme's extras. */
+:root,
+[data-theme] {
+	--font-display: var(--font-sans);
+	--glow: none;
+	--page-image: none;
+}
+
+:root,
+[data-theme='light'] {
+	--surface: #fafaf9;
+	--surface-2: #f5f5f4;
+	--surface-3: #e7e5e4;
+	--border: #d6d3d1;
+	--border-strong: #857f7a;
+	--ink: #1c1917;
+	--ink-muted: #66605c;
+	--accent: #b45309;
+	--accent-fill: #b45309;
+	--accent-ink: #fffbeb;
+	--danger: #b91c1c;
+	color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme]) {
+		--surface: #1c1917;
+		--surface-2: #292524;
+		--surface-3: #44403c;
+		--border: #44403c;
+		--border-strong: #7c756f;
+		--ink: #fafaf9;
+		--ink-muted: #bab4af;
+		--accent: #fbbf24;
+		--accent-fill: #fbbf24;
+		--accent-ink: #1c1917;
+		--danger: #fca5a5;
+		color-scheme: dark;
+	}
+}
+
+[data-theme='dark'] {
+	--surface: #1c1917;
+	--surface-2: #292524;
+	--surface-3: #44403c;
+	--border: #44403c;
+	--border-strong: #7c756f;
+	--ink: #fafaf9;
+	--ink-muted: #bab4af;
+	--accent: #fbbf24;
+	--accent-fill: #fbbf24;
+	--accent-ink: #1c1917;
+	--danger: #fca5a5;
+	color-scheme: dark;
+}
+
+/* Warm paper and a wax-seal red: easy light for a bright room and long prep. */
+[data-theme='parchment'] {
+	--surface: #f8f1e3;
+	--surface-2: #efe5d0;
+	--surface-3: #e2d5ba;
+	--border: #b9a782;
+	--border-strong: #857350;
+	--ink: #2a1f14;
+	--ink-muted: #625039;
+	--accent: #8c2f1b;
+	--accent-fill: #8c2f1b;
+	--accent-ink: #fff7ec;
+	--danger: #a8201a;
+	--font-display:
+		'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', 'URW Palladio L', P052,
+		Georgia, serif;
+	color-scheme: light;
+}
+
+/* Cool blue-slate for a dim room or a screen shared across the table. */
+[data-theme='midnight'] {
+	--surface: #0f1623;
+	--surface-2: #172033;
+	--surface-3: #243049;
+	--border: #3d4d70;
+	--border-strong: #6f82a8;
+	--ink: #e8edf7;
+	--ink-muted: #9fb0cf;
+	--accent: #7cb4ff;
+	--accent-fill: #7cb4ff;
+	--accent-ink: #0b1220;
+	--danger: #ff8a8a;
+	color-scheme: dark;
+}
+
+/* Black on white with strong edges, for low vision or glare. */
+[data-theme='contrast'] {
+	--surface: #ffffff;
+	--surface-2: #f0f0f0;
+	--surface-3: #d9d9d9;
+	--border: #6b6b6b;
+	--border-strong: #4d4d4d;
+	--ink: #000000;
+	--ink-muted: #3d3d3d;
+	--accent: #0a3bb0;
+	--accent-fill: #0a3bb0;
+	--accent-ink: #ffffff;
+	--danger: #a50e0e;
+	color-scheme: light;
+}
+
+/* White paper and black ink: a monochrome look where the accent is the ink. */
+[data-theme='paper'] {
+	--surface: #ffffff;
+	--surface-2: #f5f5f5;
+	--surface-3: #e5e5e5;
+	--border: #d4d4d4;
+	--border-strong: #737373;
+	--ink: #171717;
+	--ink-muted: #525252;
+	--accent: #171717;
+	--accent-fill: #171717;
+	--accent-ink: #ffffff;
+	--danger: #b91c1c;
+	color-scheme: light;
+}
+
+/* Aged yellow paper, brown ink and a soft vignette, with Georgia headings. */
+[data-theme='sepia'] {
+	--surface: #f5ead0;
+	--surface-2: #e8dbb9;
+	--surface-3: #e3d2a8;
+	--border: #b3945f;
+	--border-strong: #86683a;
+	--ink: #2b1f12;
+	--ink-muted: #5e4830;
+	--accent: #4a3620;
+	--accent-fill: #4a3620;
+	--accent-ink: #f5ead0;
+	--danger: #8e271b;
+	--font-display: Georgia, 'Times New Roman', serif;
+	--page-image: radial-gradient(
+		ellipse at center,
+		rgba(255, 250, 235, 0.35),
+		rgba(110, 80, 30, 0.2)
+	);
+	color-scheme: light;
+}
+
+/* Cool grey-blue daylight with a clear blue accent. */
+[data-theme='frost'] {
+	--surface: #f3f5f8;
+	--surface-2: #e7ecf2;
+	--surface-3: #dce3eb;
+	--border: #cfd8e3;
+	--border-strong: #77859a;
+	--ink: #121a24;
+	--ink-muted: #4d5b6c;
+	--accent: #1d5fae;
+	--accent-fill: #1d5fae;
+	--accent-ink: #ffffff;
+	--danger: #b42318;
+	color-scheme: light;
+}
+
+/* Pale lilac with a magenta accent and monospace headings. */
+[data-theme='lilac'] {
+	--surface: #f6f3fb;
+	--surface-2: #ece6f6;
+	--surface-3: #e1d9ef;
+	--border: #d6cde8;
+	--border-strong: #83799c;
+	--ink: #1a1426;
+	--ink-muted: #575070;
+	--accent: #b5136a;
+	--accent-fill: #b5136a;
+	--accent-ink: #ffffff;
+	--danger: #b42318;
+	--font-display:
+		ui-monospace, 'Cascadia Code', 'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'Liberation Mono',
+		monospace;
+	color-scheme: light;
+}
+
+/* Near-black monochrome: the accent is the text colour. */
+[data-theme='graphite'] {
+	--surface: #111111;
+	--surface-2: #1a1a1a;
+	--surface-3: #262626;
+	--border: #3d3d3d;
+	--border-strong: #7a7a7a;
+	--ink: #ededed;
+	--ink-muted: #a8a8a8;
+	--accent: #ededed;
+	--accent-fill: #ededed;
+	--accent-ink: #111111;
+	--danger: #f87171;
+	color-scheme: dark;
+}
+
+/* Warm near-black with candle gold, Cinzel headings and a faint warm light at the top of the page. */
+[data-theme='candlelight'] {
+	--surface: #15110d;
+	--surface-2: #1e1813;
+	--surface-3: #2a221b;
+	--border: #3b3128;
+	--border-strong: #7d6c5a;
+	--ink: #ece3d6;
+	--ink-muted: #a8998a;
+	--accent: #d9a441;
+	--accent-fill: #d9a441;
+	--accent-ink: #1d1712;
+	--danger: #f0a58a;
+	--font-display: Cinzel, Georgia, serif;
+	--page-image: radial-gradient(ellipse 80% 50% at 50% 0%, #2a1f14 0%, transparent 70%);
+	color-scheme: dark;
+}
+
+/* Cold charcoal and bone-white text with blood red: oxblood buttons with cream text, a lighter red for
+   accent text and outlines, typewriter headings. */
+[data-theme='horror'] {
+	--surface: #111212;
+	--surface-2: #191a1a;
+	--surface-3: #232424;
+	--border: #363837;
+	--border-strong: #77746d;
+	--ink: #e6e2d8;
+	--ink-muted: #98958d;
+	--accent: #e5675b;
+	--accent-fill: #b33a2f;
+	--accent-ink: #fbf6ee;
+	--danger: #e8a07a;
+	--font-display: 'Special Elite', 'Courier New', monospace;
+	--page-image: radial-gradient(ellipse 70% 60% at 50% 0%, #1d1f20 0%, transparent 75%);
+	color-scheme: dark;
+}
+
+/* Violet-black with neon pink, monospace headings and glowing buttons. */
+[data-theme='cyberpunk'] {
+	--surface: #0b0a12;
+	--surface-2: #14121f;
+	--surface-3: #1d1a2d;
+	--border: #322c4c;
+	--border-strong: #6f6796;
+	--ink: #ece9ff;
+	--ink-muted: #a7a2c8;
+	--accent: #ff4fb0;
+	--accent-fill: #ff4fb0;
+	--accent-ink: #16020d;
+	--danger: #ffa38a;
+	--font-display:
+		ui-monospace, 'Cascadia Code', 'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'Liberation Mono',
+		monospace;
+	--glow: 0 0 12px rgb(255 79 176 / 0.35);
+	color-scheme: dark;
+}
+
+/* Phosphor green on black with faint scan lines, Orbitron headings and glowing buttons. */
+[data-theme='terminal'] {
+	--surface: #050b09;
+	--surface-2: #0a1411;
+	--surface-3: #0f1e18;
+	--border: #1d3a2d;
+	--border-strong: #3f7a5f;
+	--ink: #cdf7e0;
+	--ink-muted: #6e9c86;
+	--accent: #3dffa0;
+	--accent-fill: #3dffa0;
+	--accent-ink: #03140b;
+	--danger: #ffb36b;
+	--font-display: Orbitron, 'Share Tech Mono', sans-serif;
+	--glow: 0 0 12px rgb(61 255 160 / 0.35);
+	--page-image:
+		repeating-linear-gradient(0deg, rgb(61 255 160 / 0.025) 0 1px, transparent 1px 3px),
+		radial-gradient(ellipse 70% 50% at 50% 0%, #0d2219 0%, transparent 70%);
+	color-scheme: dark;
+}
+
+/* Outlines of form fields use the stronger border. The attribute selector outranks a plain utility such as
+   `border-border`, while hover and focus utilities (`focus:border-accent`) still win. */
+input[class*='border-border'],
+select[class*='border-border'],
+textarea[class*='border-border'] {
+	border-color: var(--border-strong);
+}
+
+html,
+body,
+#app {
+	height: 100%;
+}
+
+/* The page background shows around the panels, so the theme's page image goes there; fixed, so it stays put
+   while the page scrolls. */
+body {
+	@apply bg-surface font-sans text-ink antialiased;
+	background-image: var(--page-image);
+	background-attachment: fixed;
+}
+
+/* Headings and titles take the theme's display font; body text keeps Inter. A font utility on a heading (the
+   monospace table id in the editor) still wins from its own layer. */
+@layer base {
+	h1,
+	h2,
+	h3 {
+		font-family: var(--font-display);
+	}
+}
+
+/* The display font for a title that is not a heading (the app name in the top bar). */
+@utility font-display {
+	font-family: var(--font-display);
+}
+
+/* The theme's glow around a solid accent button or a selected pill (none in most themes). */
+@utility glow {
+	box-shadow: var(--glow);
+}
+
+/* Tailwind 4 leaves buttons with the arrow cursor; utilities such as cursor-grab still win from their own layer. */
+@layer base {
+	button:not(:disabled),
+	[role='button']:not([aria-disabled='true']),
+	summary,
+	select:not(:disabled) {
+		cursor: pointer;
+	}
+}
+
+/* Focus: one accent ring on every control in every theme instead of the browser's per-platform outline. */
+@layer base {
+	:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 2px;
+	}
+	input:focus-visible,
+	select:focus-visible,
+	textarea:focus-visible {
+		outline-offset: 0;
+	}
+}
+
+/* Touch targets: on coarse pointers every control is at least 44 px tall and icon buttons 44 px wide.
+   Checkbox and radio rows get the height through their label, which is the click target. Unlayered on purpose:
+   the sizes override utilities such as `min-h-8`, which stay in charge on fine pointers. */
+@media (pointer: coarse) {
+	button,
+	[role='button'],
+	summary,
+	select,
+	input:not([type='checkbox']):not([type='radio']):not([type='file']) {
+		min-height: 44px;
+	}
+	button,
+	[role='button'] {
+		min-width: 44px;
+	}
+	label:has(> input[type='checkbox'], > input[type='radio']) {
+		min-height: 44px;
+	}
+}
+
+/* Reduced motion: no transitions or animations anywhere. */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		transition-duration: 0s !important;
+		animation-duration: 0s !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Print: black on white whatever the theme, no tinted surfaces, glows, page images or heading fonts. */
+@media print {
+	:root,
+	:root[data-theme] {
+		--surface: #fff;
+		--surface-2: #fff;
+		--surface-3: #fff;
+		--border: #999;
+		--border-strong: #666;
+		--ink: #000;
+		--ink-muted: #444;
+		--accent: #000;
+		--accent-fill: #000;
+		--accent-ink: #fff;
+		--danger: #000;
+		--font-display: var(--font-sans);
+		--glow: none;
+		--page-image: none;
+		color-scheme: light;
+	}
+}

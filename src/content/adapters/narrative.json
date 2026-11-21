@@ -1,0 +1,137 @@
+{
+	"format": "strangerloom-adapter",
+	"schemaVersion": 1,
+	"id": "narrative",
+	"name": "Narrative",
+	"version": 1,
+	"labels": {
+		"header": "Aspects",
+		"defence": "Stress",
+		"offence": "Attacks",
+		"competencies": "Skills",
+		"abilities": "Stunts",
+		"concept": "High concept",
+		"aspects": "Other aspects",
+		"stress": "Stress boxes",
+		"consequences": "Consequences"
+	},
+	"lookups": {
+		"ladder": {
+			"by": ["step"],
+			"base": 0,
+			"rows": [
+				"Mediocre",
+				"Average",
+				"Fair",
+				"Good",
+				"Great",
+				"Superb",
+				"Fantastic",
+				"Epic",
+				"Legendary"
+			]
+		},
+		"stress": {
+			"by": ["threat"],
+			"rows": {
+				"minion": 1,
+				"standard": 2,
+				"elite": 3,
+				"boss": 4
+			}
+		},
+		"consequences": {
+			"by": ["threat"],
+			"rows": {
+				"minion": "none; one hit takes them out",
+				"standard": "mild",
+				"elite": "mild, moderate",
+				"boss": "mild, moderate, severe"
+			}
+		},
+		"weapon": {
+			"by": ["damageClass"],
+			"rows": {
+				"light": 1,
+				"medium": 2,
+				"heavy": 3
+			}
+		},
+		"rider": {
+			"by": ["rider"],
+			"rows": {
+				"": "",
+				"knock-down": "Places the aspect Knocked Down on the target.",
+				"push": "Moves the target one zone.",
+				"grab": "Places the aspect Held on the target.",
+				"slow": "Places the aspect Slowed on the target.",
+				"blind": "Places the aspect Blinded on the target.",
+				"frighten": "Places the aspect Shaken on the target.",
+				"daze": "Places the aspect Dazed on the target.",
+				"bleed": "Places the aspect Bleeding on the target.",
+				"ignite": "Places the aspect On Fire on the target.",
+				"weaken": "Places the aspect Weakened on the target.",
+				"expose": "Places the aspect Off Balance on the target, with a free invoke.",
+				"silence": "Places the aspect Silenced on the target.",
+				"sleep": "Places the aspect Asleep on the target."
+			}
+		}
+	},
+	"fields": [
+		{
+			"id": "step",
+			"formula": "floor(power / 4)",
+			"hidden": true
+		},
+		{
+			"id": "concept",
+			"formula": "archetypeLabel + ' (' + threat + ', power ' + power + ')'"
+		},
+		{
+			"id": "aspects",
+			"formula": "words(defence) + (len(tags) > 0 ? ' | ' + words(tags) : '')"
+		},
+		{
+			"id": "stress",
+			"section": "defence",
+			"formula": "lookup('stress', threat) + (defence == 'hard-to-kill' ? 1 : 0)",
+			"format": "{value} {value == 1 ? 'box' : 'boxes'}"
+		},
+		{
+			"id": "consequences",
+			"section": "defence",
+			"formula": "lookup('consequences', threat)"
+		}
+	],
+	"attack": {
+		"value": "{cap(kind)}, {range}. Weapon:{lookup('weapon', damageClass) + (power >= 8 ? 1 : 0)}{damageType == 'physical' ? '' : ', ' + damageType}{kind == 'area' ? ', everyone in the zone' : ''}.",
+		"note": "{lookup('rider', rider)}{trigger == '' ? '' : ' ' + cap(trigger) + '.'}"
+	},
+	"competencies": {
+		"label": "Skills",
+		"format": "{lookup('ladder', rating + step)} ({signed(rating + step)})",
+		"skills": {
+			"combat": ["Fight", "Shoot", "Physique"],
+			"magic": ["Lore", "Will"],
+			"stealth": ["Stealth", "Burglary"],
+			"social": ["Rapport", "Deceive", "Provoke"],
+			"knowledge": ["Lore", "Investigate"],
+			"survival": ["Notice", "Athletics"]
+		}
+	},
+	"sections": ["header", "defence", "offence", "competencies", "abilities", "gear", "tactics"],
+	"subtitle": "{archetypeLabel} | {cap(threat)} | power {power}",
+	"tracker": {
+		"hp": "stress",
+		"conditions": [
+			"mild consequence",
+			"moderate consequence",
+			"severe consequence",
+			"taken out",
+			"knocked down",
+			"held",
+			"on fire",
+			"shaken"
+		]
+	}
+}

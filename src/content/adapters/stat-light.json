@@ -1,0 +1,142 @@
+{
+	"format": "strangerloom-adapter",
+	"schemaVersion": 1,
+	"id": "stat-light",
+	"name": "Stat-light",
+	"version": 1,
+	"labels": {
+		"header": "Threat",
+		"defence": "Harm",
+		"offence": "Attacks",
+		"competencies": "Stats",
+		"abilities": "Moves",
+		"tier": "Tier",
+		"scale": "Scale",
+		"moves": "Moves",
+		"clock": "Harm clock",
+		"armour": "Armour"
+	},
+	"lookups": {
+		"clock": {
+			"by": ["threat"],
+			"rows": {
+				"minion": 1,
+				"standard": 4,
+				"elite": 6,
+				"boss": 8
+			}
+		},
+		"scale": {
+			"by": ["threat"],
+			"rows": {
+				"minion": "one of many; a hit takes them out",
+				"standard": "a real fight for one character",
+				"elite": "a fight for the group",
+				"boss": "the fight of the night"
+			}
+		},
+		"harm": {
+			"by": ["damageClass"],
+			"rows": {
+				"light": 1,
+				"medium": 2,
+				"heavy": 3
+			}
+		},
+		"stat": {
+			"by": ["rating"],
+			"base": 0,
+			"rows": [-1, 0, 1, 2, 2, 3]
+		},
+		"roleMove": {
+			"by": ["role"],
+			"rows": {
+				"brute": "Wade in and hit whatever is closest.",
+				"skirmisher": "Hit and fade before the counter.",
+				"controller": "Shape the ground before the clash.",
+				"support": "Keep the others standing.",
+				"sniper": "Wait for the clean shot.",
+				"leader": "Hold the line and give orders."
+			}
+		},
+		"rider": {
+			"by": ["rider"],
+			"rows": {
+				"": "",
+				"knock-down": "The target is knocked down.",
+				"push": "The target is driven back.",
+				"grab": "The target is held fast.",
+				"slow": "The target is slowed.",
+				"blind": "The target cannot see.",
+				"frighten": "The target wants out.",
+				"daze": "The target loses a beat.",
+				"bleed": "The target keeps bleeding.",
+				"ignite": "The target is on fire.",
+				"weaken": "The target hits weakly.",
+				"expose": "The target is open to the next blow.",
+				"silence": "The target cannot speak or cast.",
+				"sleep": "The target drops asleep."
+			}
+		}
+	},
+	"fields": [
+		{
+			"id": "tier",
+			"formula": "ceil(power / 2)",
+			"format": "Tier {value}"
+		},
+		{
+			"id": "scale",
+			"formula": "lookup('scale', threat)"
+		},
+		{
+			"id": "moves",
+			"formula": "lookup('roleMove', role) + (has('armoured') ? ' Shrug off a blow.' : '') + (has('ranged') ? ' Pick off whoever stands in the open.' : '') + (has('spellcaster') ? ' Twist the scene with magic.' : '') + (has('holy') ? ' Call on a higher power.' : '') + (has('stealthy') ? ' Vanish and strike from the dark.' : '') + (has('strong') ? ' Break what stands in the way.' : '') + (has('mobile') ? ' Be somewhere else.' : '') + (has('mounted') ? ' Ride down the slow.' : '') + (has('commander') ? ' Send the others in first.' : '') + (has('fanatic') ? ' Fight on past the point of sense.' : '') + (has('medic') ? ' Patch up a friend mid-fight.' : '') + (has('poisonous') ? ' Leave a wound that festers.' : '') + (has('animal-companion') ? ' Set the beast loose.' : '') + (has('augmented') ? ' Push the implants past spec.' : '') + (has('tech') ? ' Turn the machines in the room against you.' : '')"
+		},
+		{
+			"id": "clock",
+			"section": "defence",
+			"formula": "lookup('clock', threat) + (defence == 'hard-to-kill' ? 2 : 0)",
+			"format": "{value} {value == 1 ? 'segment' : 'segments'}",
+			"note": "{defence == 'hard-to-hit' ? 'Hard to hit: the first harm of a fight is halved.' : defence == 'evasive' ? 'Evasive: gets clear after taking harm.' : 'Hard to kill: a bigger clock.'}"
+		},
+		{
+			"id": "armour",
+			"section": "defence",
+			"formula": "1",
+			"when": "has('armoured')",
+			"format": "{value}, reduces one harm per fight"
+		}
+	],
+	"attack": {
+		"value": "{cap(kind)}, {range}. {lookup('harm', damageClass) + (power >= 8 ? 1 : 0)}-harm{damageType == 'physical' ? '' : ', ' + damageType}{kind == 'area' ? ', everyone in the area' : ''}.",
+		"note": "{lookup('rider', rider)}{trigger == '' ? '' : ' ' + cap(trigger) + '.'}"
+	},
+	"competencies": {
+		"label": "Stats",
+		"format": "{signed(lookup('stat', rating))}",
+		"skills": {
+			"combat": ["Force"],
+			"magic": ["Weird"],
+			"stealth": ["Sneak"],
+			"social": ["Sway"],
+			"knowledge": ["Study"],
+			"survival": ["Sense"]
+		}
+	},
+	"sections": ["header", "defence", "offence", "competencies", "abilities", "gear", "tactics"],
+	"subtitle": "{archetypeLabel} | {cap(threat)} | tier {ceil(power / 2)}",
+	"tracker": {
+		"hp": "clock",
+		"conditions": [
+			"bloodied",
+			"knocked down",
+			"held",
+			"on fire",
+			"bleeding",
+			"shaken",
+			"exposed",
+			"out of ammo"
+		]
+	}
+}

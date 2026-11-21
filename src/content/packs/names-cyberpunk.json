@@ -1,0 +1,584 @@
+{
+	"format": "strangerloom-tables",
+	"schemaVersion": 1,
+	"id": "names-cyberpunk",
+	"name": "Cyberpunk names",
+	"version": 1,
+	"presets": ["sci-fi"],
+	"tables": {
+		"cyber.given.f": {
+			"entries": [
+				"Ada",
+				"Echo",
+				"Ivy",
+				"Jade",
+				"Juno",
+				"Kira",
+				"Lyra",
+				"Mika",
+				"Nova",
+				"Rae",
+				"Roxy",
+				"Tess",
+				"Trinity",
+				"Vee",
+				"Zara"
+			]
+		},
+		"cyber.given.m": {
+			"entries": [
+				"Axel",
+				"Cade",
+				"Cole",
+				"Dex",
+				"Ezra",
+				"Jax",
+				"Jett",
+				"Knox",
+				"Nico",
+				"Orion",
+				"Rex",
+				"Ryker",
+				"Silas",
+				"Talon",
+				"Vance",
+				"Zane"
+			]
+		},
+		"cyber.given.n": {
+			"entries": [
+				"Ash",
+				"Blue",
+				"Cass",
+				"Eden",
+				"Indy",
+				"Jules",
+				"Kai",
+				"Kit",
+				"Lex",
+				"Nyx",
+				"Quinn",
+				"Raz",
+				"Remy",
+				"Rio",
+				"Sage",
+				"Sol",
+				"Wren",
+				"Zen"
+			]
+		},
+		"cyber.word": {
+			"entries": [
+				"Axiom",
+				"Banshee",
+				"Blitz",
+				"Byte",
+				"Cache",
+				"Chrome",
+				"Cinder",
+				"Cipher",
+				"Circuit",
+				"Daemon",
+				"Dash",
+				"Dice",
+				"Drift",
+				"Echo",
+				"Ember",
+				"Flux",
+				"Fuse",
+				"Ghost",
+				"Glitch",
+				"Grid",
+				"Halo",
+				"Hex",
+				"Jinx",
+				"Kilo",
+				"Lark",
+				"Lux",
+				"Mantis",
+				"Mirage",
+				"Neon",
+				"Nova",
+				"Null",
+				"Onyx",
+				"Patch",
+				"Phantom",
+				"Pixel",
+				"Prism",
+				"Pulse",
+				"Quartz",
+				"Raven",
+				"Razor",
+				"Relay",
+				"Riot",
+				"Rook",
+				"Rust",
+				"Sable",
+				"Shiv",
+				"Socket",
+				"Specter",
+				"Spike",
+				"Static",
+				"Switch",
+				"Tango",
+				"Torque",
+				"Tracer",
+				"Vandal",
+				"Vector",
+				"Vex",
+				"Viper",
+				"Volt",
+				"Widget",
+				"Wraith",
+				"Zero",
+				"Zip"
+			]
+		},
+		"cyber.pre": {
+			"entries": [
+				"Black",
+				"Chrome",
+				"Cold",
+				"Dark",
+				"Data",
+				"Dead",
+				"Ghost",
+				"Glass",
+				"Hard",
+				"Hot",
+				"Iron",
+				"Mono",
+				"Neon",
+				"Night",
+				"Null",
+				"Quick",
+				"Red",
+				"Shadow",
+				"Silk",
+				"Sky",
+				"Static",
+				"Steel",
+				"Void",
+				"Wire",
+				"Zero"
+			]
+		},
+		"cyber.suf": {
+			"entries": [
+				"bit",
+				"blade",
+				"burn",
+				"byte",
+				"code",
+				"drop",
+				"fang",
+				"fire",
+				"frame",
+				"hack",
+				"jack",
+				"light",
+				"line",
+				"lock",
+				"pixel",
+				"run",
+				"set",
+				"shock",
+				"sight",
+				"spark",
+				"tooth",
+				"trace",
+				"wire",
+				"wolf",
+				"works",
+				"zone"
+			]
+		},
+		"cyber.num": {
+			"entries": ["2", "3", "7", "9", "13", "42", "99", "101", "404", "X"]
+		},
+		"cyber.handle": {
+			"entries": [
+				{
+					"v": "{cyber.word}",
+					"w": 5
+				},
+				{
+					"v": "{cyber.pre}{cyber.suf}",
+					"w": 3
+				},
+				{
+					"v": "{cyber.word}{cyber.num}",
+					"w": 1
+				},
+				{
+					"v": "{cyber.word}-{cyber.num}",
+					"w": 1
+				}
+			]
+		},
+		"name.given": {
+			"entries": [
+				{
+					"v": "{modern.$culture.$g}",
+					"w": 5,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["human"]
+					}
+				},
+				{
+					"v": "{cyber.given.$g}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["human"]
+					}
+				},
+				{
+					"v": "{elf.given.$g}",
+					"w": 3,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["elf"]
+					}
+				},
+				{
+					"v": "{modern.$culture.$g}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["elf"]
+					}
+				},
+				{
+					"v": "{dwarf.given.$g}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["dwarf"]
+					}
+				},
+				{
+					"v": "{modern.$culture.$g}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["dwarf"]
+					}
+				},
+				{
+					"v": "{orc.given.$g}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["orc"]
+					}
+				},
+				{
+					"v": "{modern.$culture.$g}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["orc"]
+					}
+				},
+				{
+					"v": "{dragonborn.given.$g}",
+					"w": 3,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["dragonborn"]
+					}
+				},
+				{
+					"v": "{modern.$culture.$g}",
+					"w": 1,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["dragonborn"]
+					}
+				},
+				{
+					"v": "{halfling.given.$g}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["halfling"]
+					}
+				},
+				{
+					"v": "{modern.$culture.$g}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["halfling"]
+					}
+				},
+				{
+					"v": "{gnome.given.$g}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["gnome"]
+					}
+				},
+				{
+					"v": "{modern.$culture.$g}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["gnome"]
+					}
+				},
+				{
+					"v": "{tiefling.given.$g}",
+					"w": 3,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["tiefling"]
+					}
+				},
+				{
+					"v": "{modern.$culture.$g}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["tiefling"]
+					}
+				}
+			]
+		},
+		"name.family": {
+			"entries": [
+				{
+					"v": "{modern.$culture.family.$sex}",
+					"w": 3,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["human"]
+					}
+				},
+				{
+					"v": "{modern.$alt.family.$sex}",
+					"w": 1,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["human"]
+					}
+				},
+				{
+					"v": "{modern.$culture.family.$sex}",
+					"w": 3,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["elf"]
+					}
+				},
+				{
+					"v": "{elf.fam.en}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["elf"]
+					}
+				},
+				{
+					"v": "{dwarf.clan.en}",
+					"w": 3,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["dwarf"]
+					}
+				},
+				{
+					"v": "{modern.$culture.family.$sex}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["dwarf"]
+					}
+				},
+				{
+					"v": "{modern.$culture.family.$sex}",
+					"w": 3,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["orc"]
+					}
+				},
+				{
+					"v": "{orc.epithet}",
+					"w": 1,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["orc"]
+					}
+				},
+				{
+					"v": "{dragonborn.clan.syl}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["dragonborn"]
+					}
+				},
+				{
+					"v": "{dragonborn.clan.en}",
+					"w": 1,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["dragonborn"]
+					}
+				},
+				{
+					"v": "{modern.$culture.family.$sex}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["dragonborn"]
+					}
+				},
+				{
+					"v": "{halfling.family}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["halfling"]
+					}
+				},
+				{
+					"v": "{modern.$culture.family.$sex}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["halfling"]
+					}
+				},
+				{
+					"v": "{gnome.family}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["gnome"]
+					}
+				},
+				{
+					"v": "{modern.$culture.family.$sex}",
+					"w": 2,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["gnome"]
+					}
+				},
+				{
+					"v": "{modern.$culture.family.$sex}",
+					"w": 3,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["tiefling"]
+					}
+				},
+				{
+					"v": "{tiefling.fam.en}",
+					"w": 1,
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["tiefling"]
+					}
+				}
+			]
+		},
+		"name.extra": {
+			"entries": [
+				{
+					"v": "{cyber.handle}",
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["human"]
+					},
+					"meta": {
+						"label": "Handle",
+						"chance": 1
+					}
+				},
+				{
+					"v": "{cyber.handle}",
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["elf"]
+					},
+					"meta": {
+						"label": "Handle",
+						"chance": 1
+					}
+				},
+				{
+					"v": "{cyber.handle}",
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["dwarf"]
+					},
+					"meta": {
+						"label": "Handle",
+						"chance": 1
+					}
+				},
+				{
+					"v": "{cyber.handle}",
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["orc"]
+					},
+					"meta": {
+						"label": "Handle",
+						"chance": 1
+					}
+				},
+				{
+					"v": "{cyber.handle}",
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["dragonborn"]
+					},
+					"meta": {
+						"label": "Handle",
+						"chance": 1
+					}
+				},
+				{
+					"v": "{cyber.handle}",
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["halfling"]
+					},
+					"meta": {
+						"label": "Handle",
+						"chance": 1
+					}
+				},
+				{
+					"v": "{cyber.handle}",
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["gnome"]
+					},
+					"meta": {
+						"label": "Handle",
+						"chance": 1
+					}
+				},
+				{
+					"v": "{cyber.handle}",
+					"when": {
+						"preset": ["sci-fi"],
+						"ancestry": ["tiefling"]
+					},
+					"meta": {
+						"label": "Handle",
+						"chance": 1
+					}
+				}
+			]
+		}
+	}
+}
